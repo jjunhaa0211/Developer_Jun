@@ -1,0 +1,284 @@
+---
+title: "Asset Metadata"
+slug: "/asset-metadata"
+sidebar_position: 2
+---
+Immutable X allows for projects to specify metadata properties for their assets. These properties allow marketplaces to perform complex filtering queries to help users discover what they want more effectively.
+:::success Refresh metadata
+You can [contact support](https://support.immutable.com/hc/en-us/requests/new) to refresh metadata changes that you've made. You will need to identify the tokens that need to be re-crawled, and the updates that have been made to them.\n\nWe aim to process requests within 2 business days (AEST) but this can take longer depending on demand.
+:::
+
+## Core properties
+
+There are several core properties
+<table>
+  <thead>
+  <tr>
+    <th>
+      Property
+    </th>
+    <th>
+      Description
+    </th>
+    <th>
+      Mandatory
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <code>name</code>
+    </td>
+    <td>
+      The display name for this asset	
+    </td>
+    <td>
+      no
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>description</code>
+    </td>
+    <td>
+      The description of this asset	
+    </td>
+    <td>
+      no
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>image_url</code>
+    </td>
+    <td>
+      The URL of the display image for this asset. This will be used as a video thumbnail in the Immutable X Marketplace.
+    </td>
+    <td>
+      no
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>image</code>
+    </td>
+    <td>
+      Alternative field of image_url.	
+    </td>
+    <td>
+      no
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>animation_url</code>
+    </td>
+    <td>
+      A URL to a multi-media attachment for the item. We highly recommend the use of the HLS format for streaming video over HTTP. This is generally used for video NFT.	
+    </td>
+    <td>
+      no
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>animation_url_mime_type</code>
+    </td>
+    <td>
+      Mime type of the file that animation_url points to. Imx only supports these 3 mime types currently: <ul><li>application/vnd.apple.mpegurl,</li> <li>video/mp4,</li> <li>video/webm</li></ul>
+    </td>
+    <td>
+      yes* 
+      <br />
+      <strong>NOTE:</strong> When animation_url is specified, this field is mandatory. Otherwise this field is optional like the others.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>youtube_url</code>
+    </td>
+    <td>
+      A URL to a YouTube video. This playback method is currently not supported in the Immutable X Marketplace, but third party support could be built.	
+    </td>
+    <td>
+      no
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+The above core properties usually don't need to be mapped to a type if you don't want to do filtering on them.
+
+Partners will be required to host their own video assets and exposing their location via the `animation_url`.
+
+For video NFTs, the individual marketplace can determine whether to loop video, support autoplay, or mute on initial load. The protocol does not define how it should be played in a given marketplace.
+
+## Property type mapping
+
+The following is the source of truth specification for how metadata filters function in Immutable X. Metadata filters let API consumers filter returned NFTs by their metadata properties. These filters are applied to a bunch of endpoints.
+
+In the event where the NFT has a metadata key that does not exist yet in our database, that new key and values will be added into our database.
+
+In our database, metadata properties are stored with one of the following types:
+
+<table>
+  <thead>
+  <tr>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>enum</td>
+    <td>Property with a defined enumeration of possible values (e.g. god = nature or death).</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td>Property which contains arbitrary text. Should be searchable. Not filterable.</td>
+  </tr>
+  <tr>
+    <td>boolean</td>
+    <td>Property which can be either true or false.</td>
+  </tr>
+  <tr>
+    <td>discrete</td>
+    <td>Property which will usually be handled as a multi-select e.g. mana.</td>
+  </tr>
+  </tbody>
+</table>
+
+Example mapping in our database
+<table>
+  <thead>
+  <tr>
+    <th>key</th>
+    <th>data_type</th>
+    <th>filterable</th>
+  </tr>
+  </thead>
+  <tr>
+  <tr>
+    <td>attack</td>
+    <td>discrete</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>god</td>
+    <td>enum</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>health</td>
+    <td>discrete</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>mana</td>
+    <td>discrete</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>text</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>quality</td>
+    <td>enum</td>
+    <td>true</td>
+  </tr>
+  <tbody>
+    <tr>
+      <td>rarity</td>
+      <td>enum</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>set</td>
+      <td>enum</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>enum</td>
+      <td>true</td>
+    </tr>
+  </tbody>
+  </tr>
+</table>
+
+## Filterable
+The filterable parameter is a boolean condition that signals to the marketplace that the metadata attribute should be something the end user can filter assets with. All metadata attributes can still be text-searched but the marketplace could implement specific filters in the marketplace UI tailored to the particular collection.
+
+Please note, the "filterable" parameter can only be **true** for non-text parameter types.
+
+Filters are only generated for properties at the top-level of the JSON metadata object.
+## Example metadata
+```json
+{
+  // core fields:
+  "name": "Rufus",
+  "animation_url": "https://guildofguardians.mypinata.cloud/ipfs/QmQDee8BPDfAH2ykRX375AWJwYZcbbJQa8wHokrSnMLLUC/HLS/Base/CollectionAsset_Hero_Rufus_Base.m3u8",
+  "animation_url_mime_type": "application/vnd.apple.mpegurl",
+  "image_url": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Rufus/Thumbnail_Hero_Rufus_Base.png",
+
+  // Add more (non core) properties as long as it's a flat key/value structure 
+  // and these values match the schema that the contract was registered with
+  "attack": 4,
+  "collectable": true,
+  "god": "Ranged",
+  "element": "Water",
+  "product": 2,
+  "rarity": 2,
+  "type": 3,
+}
+```
+
+## Example metadata schema
+Please note:
+  * The "filterable" parameter can only be **true** for non-text parameter types.
+  * We don't need you to provide us the values for an enum type. We auto-generate the list of values based on what is passed to us through your metadata endpoint
+  * We don't need the range of values for a discrete type. We auto-generate the range based on the provided list of values 
+
+```json
+{
+    "metadata": [
+        {
+            "name": "name",
+            "type": "text"
+        },
+                {
+            "name": "attack",
+            "type": "discrete",
+            "filterable": true
+        },
+        {
+            "name": "collectable",
+            "type": "boolean",
+            "filterable": true
+        },
+        {
+            "name": "god",
+            "type": "enum",
+            "filterable": true
+        },
+        {
+            "name": "element",
+            "type": "enum",
+            "filterable": true
+        },
+        {
+            "name": "product",
+            "type": "discrete",
+            "filterable": true
+        },
+        {
+            "name": "type",
+            "type": "discrete",
+            "filterable": true
+        }
+    ]
+}
+```

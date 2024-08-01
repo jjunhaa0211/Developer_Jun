@@ -1,0 +1,100 @@
+{
+  "name": "imx-docs",
+  "version": "1.1.2",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "lint": "eslint . --ext .ts --ext .js --ext .jsx --ext .tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write 'src/**/*.{js,jsx,css}'",
+    "prepare": "is-ci || husky install",
+    "test": "jest --passWithNoTests",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.4.0",
+    "@docusaurus/plugin-google-gtag": "^3.4.0",
+    "@docusaurus/preset-classic": "^3.4.0",
+    "@docusaurus/theme-search-algolia": "^3.4.0",
+    "@mdx-js/react": "^1.6.22",
+    "@stoplight/elements": "^7.5.19",
+    "@svgr/webpack": "^6.2.1",
+    "@types/styled-components": "^5.1.34",
+    "buffer": "^6.0.3",
+    "clsx": "^1.1.1",
+    "docusaurus2-dotenv": "^1.4.0",
+    "path-browserify": "^1.0.1",
+    "prism-react-renderer": "^1.3.1",
+    "process": "^0.11.10",
+    "react": "^18.3.1",
+    "react-client": "^1.0.1",
+    "react-dom": "^18.3.1",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "^6.1.12",
+    "typescript": "^4.6.3",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@docusaurus/module-type-aliases": "^3.4.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@tsconfig/docusaurus": "^1.0.5",
+    "@types/react": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "husky": "^8.0.1",
+    "is-ci": "^3.0.1",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3",
+    "react-router-dom": "^6.3.0",
+    "semantic-release": "^19.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

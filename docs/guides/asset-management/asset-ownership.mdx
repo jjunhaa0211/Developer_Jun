@@ -1,0 +1,178 @@
+---
+title: "Asset Ownership"
+slug: "/asset-ownership"
+sidebar_position: 1
+---
+Supporting Immutable X Assets in your application lets your users use their assets while they are tradable in Immutable X. As Immutable X is an asset and trading protocol, rather than an exclusive solution, you can support Immutable X assets alongside assets from any other Layer 2 protocol, or Ethereum mainnet itself.
+
+Users of any NFT-based application can choose to deposit their assets into Immutable X to reap the UX and scalability benefits we provide. Supporting Immutable X natively will improve the experience of those users, will make serious traders more likely to use your project, and will give your application access to our powerful Layer 2 liquidity features.
+
+Immutable X is a fully API-based protocol, so integrating is easy regardless of your level of blockchain experience - it can usually be done in hours.
+
+## Registering your project
+Before assets from your project will be tradable on Immutable X, you must register your project with Immutable. Eventually, this process will be automated, but currently, we will verify you and your ownership over the project manually.
+
+## Registering your collections
+Each project may maintain multiple collections of assets. In Gods Unchained, for instance, we have cards, trinkets and boards. Collections are tied 1:1 to ERC721 contracts and are therefore uniquely identified by their address. 
+
+## Consuming the assets API
+Assets can have one of the following statuses:
+<table>
+  <thead>
+  <tr>
+    <th>
+      Status
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <code>imx</code>
+    </td>
+    <td>
+      The asset is in the Immutable X L2 environment.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>eth</code>
+    </td>
+    <td>
+      The asset is on the main Ethereum blockchain.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>depositing</code>
+    </td>
+    <td>
+      The asset is still on the main Ethereum blockchain, but is part of a currently ongoing transaction.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>pendingWithdrawal</code>
+    </td>
+    <td>
+      A withdrawal has been requested for this asset, and it will be included in an upcoming batch.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>withdrawable</code>
+    </td>
+    <td>
+      The asset has been included in a published batch, and can now be withdrawn from the Immutable X smart contract.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>withdrawing</code>
+    </td>
+    <td>
+      The asset is on the main Ethereum blockchain, and is being pulled from the Immutable X smart contracts to a user's account.
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+To display assets which are currently in Immutable X, you will need to use the [Assets API](ref:get_v1-assets-1). Note that this API will return all assets (including those on-chain or in the withdrawal process). A common use case is displaying a user's inventory:
+```bash
+GET https://api.x.immutable.com/v1/assets?collection=0x...&user=0x...&status=imx
+```
+
+Setting `status=imx` helps protect against displaying the same asset twice (if you already use Ethereum to track your application's assets). This endpoint will return assets in the following format (note the pagination properties):
+```json
+{
+  "page": 1,
+  "perPage": 20,
+  "total": 500,
+  "records": [
+    {
+      "name": "Ratify",
+      "description": "",
+      "image_url": "",
+      "cache_for": 100,
+      "tradable": true,
+      "external_url": "",
+      "background_color": "",
+      "status": "imx",
+      "properties": {
+        "proto": {
+          "value": "300",
+          "type": "number"
+        },
+        "created": {
+          "value": "2020-09-04",
+          "type": "date"
+        },
+        "type": {
+          "value": "spell",
+          "type": "enum"
+        }
+      }
+        }
+  ]
+}
+```
+
+```json title="Gods Unchained metadata endpoint"
+GET https://api.godsunchained.com/metadata?collection=0x...&token_ids=1456,5423
+
+{
+    "0x...": {
+    "1456": {
+        "name": "Ratify",
+      "description": "",
+      "image_url": "",
+      "cache_for": 100,
+      "tradable": true,
+      "external_url": "",
+      "background_color": "",
+      "properties": {
+        "proto": {
+          "value": "300",
+          "type": "number"
+        },
+        "created": {
+          "value": "2020-09-04",
+          "type": "date"
+        },
+        "type": {
+          "value": "spell",
+          "type": "enum"
+        }
+      }
+    },
+    "5423": {
+        "name": "Ratify",
+      "description": "",
+      "image_url": "",
+      "cache_for": 100,
+      "tradable": true,
+      "external_url": "",
+      "background_color": "",
+      "properties": {
+        "proto": {
+          "value": "300",
+          "type": "number"
+        },
+        "created": {
+          "value": "2020-09-04",
+          "type": "date"
+        },
+        "type": {
+          "value": "spell",
+          "type": "enum"
+        }
+      }
+    }
+    }
+}
+```
+If you've set up the above, then your users will have full access to the liquidity and scalability of Immutable X. If you'd like to support trading yourself, see our guide on [supporting asset trading](doc:trading-assets).
