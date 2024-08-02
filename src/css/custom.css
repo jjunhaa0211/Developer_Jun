@@ -19,14 +19,7 @@
 }
 
 :root {
-  /* Colors */
-  --ifm-color-primary: #049bb1;
-  --ifm-color-primary-dark: #036f7f;
-  --ifm-color-primary-darker: #02444d;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #24d1e9;
-  --ifm-color-primary-lighter: #34d1e6;
-  --ifm-color-primary-lightest: #80d1db;
+  --ifm-color-primary: #007AF4;
   --ifm-code-font-size: 95%;
 
   /* Homepage Colors */
@@ -41,7 +34,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #ffffff;
+  --ifm-color-primary: #007AF4;
   --ifm-color-primary-dark: #ffffff;
   --ifm-color-primary-darker: #ffffff;
   --ifm-color-primary-darkest: #ffffff;
@@ -404,12 +397,10 @@ button.DocSearch.DocSearch-Button:focus {
   background-color: var(--ifm-color-home-elevation-04);
 }
 
-/* Sidebar Toggle color mode icon */
 .navbar-sidebar__brand > div {
   display: none !important;
 }
 
-/* Sidebar close icon */
 button.clean-btn.navbar-sidebar__close {
   width: 3rem;
   height: 3rem;
@@ -455,7 +446,7 @@ button.clean-btn.navbar-sidebar__close > svg {
   padding-right: 1rem;
 }
 .navbar-sidebar .menu .menu__link {
-  font-family: 'Roboto';
+  font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -476,7 +467,7 @@ button.clean-btn.navbar-sidebar__close > svg {
   margin-top: 100px;
 }
 .custom_sidebar_menu {
-  font-family: 'Roboto' !important;
+  font-family: 'Pretendard' !important;
   font-weight: 400 !important;
   font-size: 16px !important;
   line-height: 24px !important;

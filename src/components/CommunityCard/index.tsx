@@ -81,7 +81,7 @@ const ContentSection = styled.div`
 `;
 
 const Title = styled.h3`
-  font-family: 'Suisse-Intl';
+  font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -91,9 +91,8 @@ const Title = styled.h3`
 `;
 
 const Subtitle = styled.p`
-  font-family: 'Suisse-Intl';
+  font-family: 'Pretendard';
   font-style: normal;
-  font-weight: 300;
   font-size: 14px;
   line-height: 20px;
   color: var(--ifm-color-home-text-primary);
