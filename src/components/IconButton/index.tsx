@@ -36,40 +36,46 @@ const StyledIconButton = styled.button<{ variant: 'default' | 'solid' }>`
   padding: 0;
   cursor: pointer;
   font-size: 0;
-  
-  ${props => props.variant === 'default' && css`
-    background: transparent;
-    border: 2px solid var(--ifm-color-home-text-primary);
-    border-style: solid;
 
-    &:hover {
-      border-width: 3px;
-    }
+  ${(props) =>
+    props.variant === 'default' &&
+    css`
+      background: transparent;
+      border: 2px solid var(--ifm-color-home-text-primary);
+      border-style: solid;
 
-    &:active {
-      border-width: 4px;
-    }
-  `}
+      &:hover {
+        border-width: 3px;
+      }
 
-  ${props => props.variant === 'solid' && css`
-    background: var(--ifm-color-home-elevation-01);
-    border-width: 0;
-    transition: background 300ms ease-out;
+      &:active {
+        border-width: 4px;
+      }
+    `}
 
-    &:hover,
-    &:active {
-      background: var(--ifm-color-home-elevation-02);
-    }
-
-    ${({ theme }) => theme.colorMode === 'dark' && css`
-      background: var(--ifm-color-home-elevation-03);
+  ${(props) =>
+    props.variant === 'solid' &&
+    css`
+      background: var(--ifm-color-home-elevation-01);
+      border-width: 0;
+      transition: background 300ms ease-out;
 
       &:hover,
       &:active {
-        background: var(--ifm-color-home-elevation-04);
+        background: var(--ifm-color-home-elevation-02);
       }
+
+      ${({ theme }) =>
+        theme.colorMode === 'dark' &&
+        css`
+          background: var(--ifm-color-home-elevation-03);
+
+          &:hover,
+          &:active {
+            background: var(--ifm-color-home-elevation-04);
+          }
+        `}
     `}
-  `}
 `;
 
 export default IconButton;

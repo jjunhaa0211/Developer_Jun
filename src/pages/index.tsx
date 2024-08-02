@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 import CommunityCard from '../components/CommunityCard';
 
 const Homepage = () => {
-
   const communitySectionData = [
     {
       title: 'Github',
@@ -49,7 +48,8 @@ const Homepage = () => {
             title={
               <div className={clsx('grad', styles.title)}>
                 박준하의
-                <br className={styles.displayForExtraSmall} /> 개발 컨포넌트 독스입니다.
+                <br className={styles.displayForExtraSmall} /> 개발 컨포넌트
+                독스입니다.
               </div>
             }
             subtitle={

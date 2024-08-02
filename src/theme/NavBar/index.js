@@ -151,7 +151,8 @@ function NavbarMobileSidebar({ sidebarShown, toggleSidebar }) {
         className={clsx('navbar-sidebar__items', {
           'navbar-sidebar__items--show-secondary': secondaryMenu.shown,
         })}
-      >Developer
+      >
+        Developer
         <div className="navbar-sidebar__item menu">
           <ul className="menu__list">
             {items.map((item, i) => (
@@ -172,7 +173,6 @@ function NavbarMobileSidebar({ sidebarShown, toggleSidebar }) {
             <GithubIcon className={styles.githubIconSideBar} />
           </a>
         </div>
-
         <div className="navbar-sidebar__item navbar-sidebar__item--secondary menu">
           <button
             type="button"

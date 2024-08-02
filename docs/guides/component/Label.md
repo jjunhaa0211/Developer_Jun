@@ -24,7 +24,7 @@ private let testLabel = JNLabel(text: "test",
                                 font: UIFont.Pretendard.bodyMedium,
                                 textColor: .gray,
                                 isCenter: false,
-                                numberOfLineCount: 1
+                                numberOfLineCount: 1)
 ```
     </TabItem>
         <TabItem value="fe" label="FE (React)">

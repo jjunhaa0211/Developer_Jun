@@ -25,14 +25,15 @@ const CommunityCard = ({
   };
 
   return (
-    <CommunityCardContainer theme={theme} as={isLongCard ? ImageBackground : undefined}>
+    <CommunityCardContainer
+      theme={theme}
+      as={isLongCard ? ImageBackground : undefined}
+    >
       <ContentSection>
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
       </ContentSection>
-      <CardButton onClick={handleButtonClick}>
-        {buttonText}
-      </CardButton>
+      <CardButton onClick={handleButtonClick}>{buttonText}</CardButton>
     </CommunityCardContainer>
   );
 };

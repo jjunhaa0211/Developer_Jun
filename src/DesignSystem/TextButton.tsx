@@ -19,5 +19,4 @@ const StyledButton = styled.button`
   font-size: 16px;
 `;
 
-
 export default Button;

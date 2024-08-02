@@ -28,7 +28,12 @@ const CardContainer = styled.div`
 const ImageContainer = styled.div<{ imageUrl: string }>`
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)), url(${props => props.imageUrl});
+  background-image: linear-gradient(
+      0deg,
+      rgba(19, 19, 19, 0.5),
+      rgba(19, 19, 19, 0.5)
+    ),
+    url(${(props) => props.imageUrl});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

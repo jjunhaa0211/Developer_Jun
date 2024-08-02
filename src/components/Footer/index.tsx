@@ -26,9 +26,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <div>
-        <FooterText>
-          저는 우주최강 개발자가 될 박준하입니다
-        </FooterText>
+        <FooterText>저는 우주최강 개발자가 될 박준하입니다</FooterText>
       </div>
     </FooterContainer>
   );

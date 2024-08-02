@@ -34,7 +34,9 @@ function DocSearch({ contextualSearch, ...props }) {
 
   const configFacetFilters = props.searchParameters?.facetFilters ?? [];
 
-  const facetFilters = contextualSearch ? [...contextualSearchFacetFilters, ...configFacetFilters] : configFacetFilters;
+  const facetFilters = contextualSearch
+    ? [...contextualSearchFacetFilters, ...configFacetFilters]
+    : configFacetFilters;
 
   const searchParameters = {
     ...props.searchParameters,

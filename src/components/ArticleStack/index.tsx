@@ -48,7 +48,9 @@ const ArticleStackContainer = styled.div`
   padding: 2rem 1.5rem;
   background: var(--ifm-color-home-elevation-00);
 
-  ${({ theme }) => theme.colorMode === 'dark' && `
+  ${({ theme }) =>
+    theme.colorMode === 'dark' &&
+    `
     background: var(--ifm-color-home-elevation-02);
   `}
 
