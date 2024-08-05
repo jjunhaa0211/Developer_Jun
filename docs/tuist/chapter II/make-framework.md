@@ -13,15 +13,15 @@ Framework 만들기를 해볼 텐데 여기까지 읽어주신거 감사합니�
 
 일단 Xcode 실행 후 Framework를 만들어 주세요
 
-![스크린샷 2023-11-15 오후 12.48.41.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/1.png)
+<img src="https://i.imghippo.com/files/6yca61722864764.png" alt="" border="0"/>
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/2.png)
+<img src="https://i.imghippo.com/files/H96c41722864784.png" alt="" border="0"/>
 
 위와 같이 나왔다면 프레임워크를 만들준비가 되었습니다.
 
 저희는 간단하게 유저 이름을 넣으면 Hello를 출력해주는 Hello 클리스를 만들어주겠습니다.
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/3.png)
+<img src="https://i.imghippo.com/files/l2mtO1722864801.png" alt="" border="0"/>
 
 그리고 이제 사용하는 법에 대해서 알려드리겠습니다.
 
@@ -29,27 +29,27 @@ Framework 만들기를 해볼 텐데 여기까지 읽어주신거 감사합니�
 
 그러면 기본 프로젝트에서 `Add Files to “your project”` 를 선택해주세요
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/4.png)
+<img src="https://i.imghippo.com/files/kg7AN1722864820.png" alt="" border="0"/>
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/5.png)
+<img src="https://i.imghippo.com/files/miBDR1722864840.png" alt="" border="0"/>
 
 이렇게 당신이 만든 `Framework`의 `xcdeproj`를 추가해주세요
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/6.png)
+<img src="https://i.imghippo.com/files/oE0Uv1722864861.png" alt="" border="0"/>
 
 이렇게 들어왔다면 성공입니다. 혹시나 해서 말하는 건데… 혹시 `TestFramework`를 켜두고 추가를 누르면 화살표가 뜨지 않을 것 입니다. 당황하지 마시고 Xcode 끄시고 다시 Project 열어서 프레임워크 추가하시면 정상 작동 될 것입니다!
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/7.png)
+<img src="https://i.imghippo.com/files/fCi4f1722864882.png" alt="" border="0"/>
 
 이쪽으로 가서 Frameworks, Libraries, and Embedded Content를 추가해줍니다.
 
 + 버튼을 누르시고 이렇게 해주세요
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/8.png)
+<img src="https://i.imghippo.com/files/BpvDA1722864908.png" alt="" border="0"/>
 
 이제 평소에 라이브러리 사용하듯 `import` 해서 사용하시면 됩니다.
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/9.png)
+<img src="https://i.imghippo.com/files/yMPE91722864925.png" alt="" border="0"/>
 
 이렇게 일단은 `Framework`를 만드는 법에 대해서 배워보았는데
 
@@ -67,7 +67,7 @@ Xcode에서 `Static`과 `Dynamic`의 차이를 바꾸고 싶다면 `Mach-O Type`
 
 ## Embed vs Do Not Embed?
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/10.png)
+<img src="https://i.imghippo.com/files/JV2Ge1722864949.png" alt="" border="0"/>
 
 이것도 정말 중요한데요 저처럼 멋모르고 “코카콜라 맛있다~맛있…“ 갈기시면 나중에 이유도 모르고 크러쉬가 발생합니다. `Embed`와 `Do Not Embed`는 위에서 `Framework`를 만들 때 추가 작업에서 보았던 것인데요. 한번 알아보도록 하죠
 
@@ -95,19 +95,19 @@ Xcode에서 `Static`과 `Dynamic`의 차이를 바꾸고 싶다면 `Mach-O Type`
 
 `Framework`를 만들면 `Mach-O Type`이 `Dynamic Library`로 되어있습니다.
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/11.png)
+<img src="https://i.imghippo.com/files/SlmGY1722864971.png" alt="" border="0"/>
 
 여기서 우리는 `Static Library` 로 바꾸어줍니다.
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/12.png)
+<img src="https://i.imghippo.com/files/GTZIe1722864993.png" alt="" border="0"/>
 
 위 Products 파일을 열어보면
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/13.png)
+<img src="https://i.imghippo.com/files/KY7fB1722865016.png" alt="" border="0"/>
 
 Products 의 구조를 보실 수 있는데 여기서 절대로 누르면 잘못될 것 같은 친구를 우클릭 후 자세히보기를 누르면 아래와 같은 결과가 발생합니다.
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/14.png)
+<img src="https://i.imghippo.com/files/BVvlW1722865045.png" alt="" border="0"/>
 
 짜란~! 안에 내부 소스를 뜯어볼 수 있습니다.
 
@@ -115,9 +115,9 @@ Products 의 구조를 보실 수 있는데 여기서 절대로 누르면 잘못
 
 그러니까 `Static Library`를 설명할때 앱이 커지는 이유를 알아보았습니다. 그러면 만약 `Static Library`에 `Do Not Embed`를 하게되면 어떻게 될까요?
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/15.png)
+<img src="https://i.imghippo.com/files/4MXyf1722865062.png" alt="" border="0"/>
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/16.png)
+<img src="https://i.imghippo.com/files/MIRu91722865080.png" alt="" border="0"/>
 
 이렇게 하면 `Frameworks` 파일이 없어집니다 
 
@@ -133,17 +133,17 @@ Products 의 구조를 보실 수 있는데 여기서 절대로 누르면 잘못
 
 `Framework`를 만들면 `Mach-O Type`이 `Dynamic`으로 다시 바꿔주시면됩니다.
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/17.png)
+<img src="https://i.imghippo.com/files/EeTJe1722865099.png" alt="" border="0"/>
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/18.png)
+<img src="https://i.imghippo.com/files/CceAp1722865118.png" alt="" border="0"/>
 
 위에서 `Embed & Sign`을 하게 되면 아래와 같은 파일구조가 이루어집니다.
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/19.png)
+<img src="https://i.imghippo.com/files/VZ0EX1722865137.png" alt="" border="0"/>
 
 하지만 Do Not Embed를 하게 되면 
 
-![스크린샷 2023-11-15 오후 12.50.25.png](https://github.com/jjunhaa0211/Tuist-Junha/blob/main/Tuist/Chapter%20II/3/Framework%20만들어보기%20c0036d796090472aa9ee077b097b4569/20.png)
+<img src="https://i.imghippo.com/files/NDKbV1722865154.png" alt="" border="0"/>
 
 `Dynamic Framework`의 경우에는 런타임 중에 `Framework`의 레퍼런스로 찾는다했는데 `excutable binary`가 없어졌습니다. 때문에 빌드는 가능하지만 실행 시키면 런타임 중에 링크를 찾기 위해 `Frameworks`가 없기 때문에 에러가 발생합니다.
 

@@ -111,7 +111,7 @@ tuist 친구들은 네이티브 도구와 기술의 사용을 최적화하여 �
 - Shared는 모든 layer에서 공용으로 사용될 모듈을 담당합니다.
 - 디자인시스템, 유틸, 로깅, 익스텐션 등 처럼 모든 곳에서 사용될 모듈을 제공함으로써 재사용성을 높인다.
 
-<!-- <img width="624" alt="스크린샷 2023-11-14 오후 8 26 08" src="https://github.com/jjunhaa0211/Tuist-Junha/assets/102890390/61e7643e-3921-4e5f-b159-72ba89a86f00"> -->
+<img src="https://i.imghippo.com/files/s4iZT1722865799.png" alt="" border="0"/>
 
 Example
 

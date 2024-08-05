@@ -17,7 +17,7 @@ sidebar_position: 2
 
 ### **Static Framework (정적 프레임워크)**
 
-<img src="https://raw.githubusercontent.com/jjunhaa0211/Tuist-Junha/main/Tuist/Chapter%20II/2/Framework-image/21.png?token=GHSAT0AAAAAACH7GOFLREIHG7PCAW4UO2I6ZKUMYOQ" alt="이미지 설명" width="400"/>
+<img src="https://i.imghippo.com/files/dtch51722864322.png" alt="" border="0"  width="600" height="400"/>
 
 - 구성: Source File + Static Library + Static Linker
 - 동작 원리: `Static Linker`를 통해 `Static Library` 코드가 `Execute File(application file)` 내에 복사되어 Heap 메모리에 상주
@@ -31,7 +31,7 @@ sidebar_position: 2
 
 ### **Dynamic Framework (동적 프레임워크)**
 
-<img src="https://raw.githubusercontent.com/jjunhaa0211/Tuist-Junha/main/Tuist/Chapter%20II/2/Framework-image/20.png?token=GHSAT0AAAAAACH7GOFK3DPNVLGR7IR3PUBIZKUMXYQ" alt="이미지 설명" width="400"/>
+<img src="https://i.imghippo.com/files/7Knfc1722864351.png" alt="" border="0" width="600" height="400"/>
 
 
 - 구성: Source File + Dynamic Library References + Dynamic Library + Static Linker

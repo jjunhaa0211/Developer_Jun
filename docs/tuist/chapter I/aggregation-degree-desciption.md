@@ -14,11 +14,11 @@ sidebar_position: 3
 - 변경이 발생할 때 모듈 내부에서 발생하는 변경 정도
 - 응집도가 높을 수록 좋다
 
-하나의 모듈에 하나의 책임 또는 목적을 위해 연결이 잘 모여있는 것과 아닌 것을 비교해보겠습니다.
+하나의 모듈에 하나의 책임 또는 목1적을 위해 연결이 잘 모여있는 것과 아닌 것을 비교해보겠습니다.
 
-<img src="/Users/junha/Desktop/Developer_Jun/static/img/HighAggregationDegree.png" alt="High Aggregation Degree" />
+<img src="https://i.imghippo.com/files/eAT5O1722863970.png" alt="" border="0"/>
 
-<img src="/Users/junha/Desktop/Developer_Jun/static/img/LowAggregationDegree.png" alt="Low Aggregation Degree" />
+<img src="https://i.imghippo.com/files/YYHE81722863988.png" alt="" border="0"/>
 
 <br />
 <br />
