@@ -64,7 +64,8 @@ class 3VC {
 - **UIScreen.main**
 - **URLSession.shared**
 - **UserDefaults.standard**
-- **otificationCenter.default**
+- **otificationCenter.default** <br/>
+
 등등에 전부 싱글톤 패턴을 사용하고 있었습니다.
 
 [Singleton Pattern 예제코드](https://github.com/jjunhaa0211/ADPattern-Swift/tree/main/GoF-SingletonPattern)
