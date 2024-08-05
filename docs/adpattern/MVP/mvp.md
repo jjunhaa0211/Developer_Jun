@@ -82,3 +82,7 @@ MVP 단점
 - 구현의 번거로움
     - MVP 패턴은 구현하기 쉽지 않습니다.
     - V, P, M 사이의 상호작용을 처리하고 유지하는 것은 어려울 수 있습니다.
+
+[MVP 예제 코드](https://github.com/jjunhaa0211/ADPattern-Swift/tree/main/MVP/JNBoard_MVP)
+
+[MVP 테스트 예제](https://github.com/jjunhaa0211/ADPattern-Swift/tree/main/MVP/JNBoard_MVP)
