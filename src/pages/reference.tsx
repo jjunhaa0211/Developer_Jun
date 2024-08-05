@@ -11,7 +11,6 @@ export default function APIPage() {
         <title>API Reference | Immutable X Documentation</title>
         <meta name="description" content="Immutable X REST API Reference" />
         <meta name="og:description" content="Immutable X REST API Reference" />
-        {/* Loading styles for elements this way so it doesn't interfere with other styles */}
         <link
           rel="stylesheet"
           href="https://unpkg.com/@stoplight/elements@7.3.7/styles.min.css"
@@ -28,7 +27,6 @@ export default function APIPage() {
         }
       >
         {() => {
-          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const { API } = require('@stoplight/elements');
           return (
             <>

@@ -1,10 +1,3 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 import React, { useState, useRef, useCallback, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -41,13 +34,8 @@ function DocSearch({ contextualSearch, ...props }) {
 
   const configFacetFilters = props.searchParameters?.facetFilters ?? [];
 
-  const facetFilters = contextualSearch
-    ? // Merge contextual search filters with config filters
-      [...contextualSearchFacetFilters, ...configFacetFilters]
-    : // ... or use config facetFilters
-      configFacetFilters;
+  const facetFilters = contextualSearch ? [...contextualSearchFacetFilters, ...configFacetFilters] : configFacetFilters;
 
-  // we let user override default searchParameters if he wants to
   const searchParameters = {
     ...props.searchParameters,
     facetFilters,
@@ -108,9 +96,6 @@ function DocSearch({ contextualSearch, ...props }) {
 
   const transformItems = useRef((items) => {
     return items.map((item) => {
-      // We transform the absolute URL into a relative URL.
-      // Alternatively, we can use `new URL(item.url)` but it's not
-      // supported in IE.
       const a = document.createElement('a');
       a.href = item.url;
 
@@ -122,7 +107,6 @@ function DocSearch({ contextualSearch, ...props }) {
   }).current;
 
   const resultsFooterComponent = useMemo(
-    // eslint-disable-next-line react/display-name
     () => (footerProps) => <ResultsFooter {...footerProps} onClose={onClose} />,
     [onClose]
   );
@@ -156,9 +140,6 @@ function DocSearch({ contextualSearch, ...props }) {
   return (
     <>
       <Head>
-        {/* This hints the browser that the website will load data from Algolia,
-          and allows it to preconnect to the DocSearch cluster. It makes the first
-          query faster, especially on mobile. */}
         <link
           rel="preconnect"
           href={`https://${props.appId}-dsn.algolia.net`}

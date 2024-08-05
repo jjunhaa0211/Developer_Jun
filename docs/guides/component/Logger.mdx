@@ -6,21 +6,21 @@ sidebar_position: 12
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import LoggerDemo from '../../../src/Demo/LoggerDemo.tsx'
+import LoggerDemo from '../../../src/Demo/LoggerDemo.tsx';
 import { useState, useEffect } from 'react';
 
-# MGLogger 가이드
+### MGLogger 가이드
 
 `MGLogger`는 애플리케이션에서 다양한 심각성 수준의 메시지를 기록하는 로깅 유틸리티 클래스입니다. 구조화된 방식으로 로그를 저장하고 인쇄하는 데 도움이 됩니다.
 
-## 특징
+### 특징
 
 - 저장 및 인쇄를 위한 구성 가능한 로그 레벨 지원.
 - 다양한 로그 레벨 지원: 상세(verbose), 디버그(debug), 경고(warning), 오류(error), 테스트(test).
 - 로그 파일 수를 제한할 수 있는 지정된 디렉토리에 로그를 저장합니다.
 - 전용 디스패치 큐를 사용한 스레드 안전 로깅.
 
-## 사용 방법
+### 사용 방법
 
 <Tabs>
   <TabItem value="ios" label="iOS (Swift)" default>
