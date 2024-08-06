@@ -24,11 +24,11 @@ const Homepage = () => {
       url: 'https://www.goodjunha.com/',
     },
     {
-      title: 'Discord',
-      subtitle: '질문이 있으면 편하게 연락해주세요~ 🤙🏿',
+      title: 'Linkedin',
+      subtitle: '저랑 이웃하실래? 🥴',
       buttonText: 'Follow',
       isLongCard: false,
-      url: 'https://discord.gg/aGQJSexS',
+      url: 'https://www.linkedin.com/in/goodjunha/',
     },
     {
       title: 'Instagram',
