@@ -1,5 +1,5 @@
 ---
-title: '라이브러리 만들기'
+title: 'CocoaPod 라이브러리 만들기'
 slug: '/make_library'
 excerpt: '라이브러리를 만듭니다.'
 sidebar_position: 1
