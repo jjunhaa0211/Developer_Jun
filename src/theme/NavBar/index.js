@@ -40,9 +40,8 @@ function splitNavItemsByPosition(items) {
 }
 
 function useMobileSidebar() {
-  const windowSize = useWindowSize(); // Mobile sidebar not visible on hydration: can avoid SSR rendering
-
-  const shouldRender = windowSize === 'mobile'; // || windowSize === 'ssr';
+  const windowSize = useWindowSize();
+  const shouldRender = windowSize === 'mobile';
 
   const [shown, setShown] = useState(false);
   const toggle = useCallback(() => {
@@ -82,12 +81,8 @@ function useSecondaryMenu({ sidebarShown, toggleSidebar }) {
   });
   const previousContent = usePrevious(content);
   const [shown, setShown] = useState(() => {
-    // /!\ content is set with useEffect,
-    // so it's not available on mount anyway
-    // "return !!content" => always returns false
     return false;
-  }); // When content is become available for the first time (set in useEffect)
-  // we set this content to be shown!
+  });
 
   useEffect(() => {
     const contentBecameAvailable = content && !previousContent;
@@ -96,8 +91,7 @@ function useSecondaryMenu({ sidebarShown, toggleSidebar }) {
       setShown(true);
     }
   }, [content, previousContent]);
-  const hasContent = !!content; // On sidebar close, secondary menu is set to be shown on next re-opening
-  // (if any secondary menu content available)
+  const hasContent = !!content;
 
   useEffect(() => {
     if (!hasContent) {
@@ -151,8 +145,7 @@ function NavbarMobileSidebar({ sidebarShown, toggleSidebar }) {
         className={clsx('navbar-sidebar__items', {
           'navbar-sidebar__items--show-secondary': secondaryMenu.shown,
         })}
-      >
-        Developer
+      >Developer
         <div className="navbar-sidebar__item menu">
           <ul className="menu__list">
             {items.map((item, i) => (
@@ -173,6 +166,7 @@ function NavbarMobileSidebar({ sidebarShown, toggleSidebar }) {
             <GithubIcon className={styles.githubIconSideBar} />
           </a>
         </div>
+
         <div className="navbar-sidebar__item navbar-sidebar__item--secondary menu">
           <button
             type="button"
