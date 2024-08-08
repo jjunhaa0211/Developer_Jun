@@ -2,6 +2,7 @@
 title: 'boolean'
 slug: '/grammar/boolean'
 excerpt: 'boolean를 설명합니다.'
+sidebar_position: 2
 ---
 
 ### Swift의 Boolean 데이터 타입: 깊이 이해하기
@@ -32,11 +33,9 @@ Swift의 `Bool`은 조건문에서 매우 간결하게 사용될 수 있습니�
 `Bool` 값은 `toggle()` 메서드를 사용하여 쉽게 반전시킬 수 있습니다. 이는 `Bool` 변수를 `true`에서 `false`로, 또는 그 반대로 변경할 때 유용합니다. 예를 들어, 사용자의 상태를 토글하는 버튼의 동작을 구현할 때 매우 편리합니다:
 
 ```swift
-swift코드 복사
 var toggleStatus: Bool = false
 toggleStatus.toggle()
 print(toggleStatus)  // true
-
 ```
 
 이처럼, `Bool`은 단순해 보이지만 프로그램에서 로직을 제어하는 데 있어 핵심적인 역할을 하며, Swift에서는 이를 매우 효과적으로 사용할 수 있는 여러 메커니즘이 제공됩니다.

@@ -2,6 +2,7 @@
 title: 'int'
 slug: '/grammar/int'
 excerpt: 'int를 설명합니다.'
+sidebar_position: 1
 ---
 
 ### Swift의 정수 데이터 타입: Int와 UInt 깊이 이해하기
