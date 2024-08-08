@@ -6,22 +6,10 @@ excerpt: 'Coordinator 이론 설명합니다.'
 
 # Coordinator Pattern 이론
 ---
-
-<br/>
-
-본래 RxFlow를 하고 싶었지만 RxFlow하면서 많은 어려움을 느꼈습니다. 그래서 RxFlow에 기반이 되는 패턴이 **Coordinator** 패턴이더라고요. 그래서 오늘은 Coordinator Pattern에 대해서 알아보겠습니다.
-
-<br/>
+본래 RxFlow를 하고 싶었지만 RxFlow 하면서 많은 어려움을 느꼈습니다. 그래서 RxFlow에 기반이 되는 패턴이 **Coordinator** 패턴이더라고요. 그래서 오늘은 Coordinator Pattern에 대해서 알아보겠습니다.
 
 ### **Coordinator** 란?
-
-일단 번역기에 **Coordinator**라고 돌리면 "조정자"라고 나옵니다.
-
-**Coordinator**은 하나 이상의 뷰 컨트롤러들에게 지시를 내리는 객체이며 말그대로 조정자와 같은 연결을 합니다.
-
-요약하면 **Coordinator**는 앱의 화면 전환 및 계층에 대한 흐름을 제어하는 역활을 합니다.
-
-<br/>
+**Coordinator**는 일반적으로 "조정자"로 번역되며, 이 용어는 소프트웨어 아키텍처 내에서 특정 역할을 나타냅니다. **Coordinator**는 여러 뷰 컨트롤러들 사이에서 지휘 및 조정 역할을 수행하는 객체로, 애플리케이션 내에서 화면 전환과 계층적 흐름을 관리합니다. 이는 앱의 네비게이션을 담당하며, 각 화면이 어떻게 전환되고 어떻게 서로 연결되는지를 제어하는 중추적인 역할을 합니다.
 
 ### **Coordinator** 사용 이유
 

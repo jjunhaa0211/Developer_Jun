@@ -1,5 +1,5 @@
 ---
-title: 'tuist_install'
+title: 'tuist install'
 slug: '/chapterIV/tuist_install'
 excerpt: 'tuist_install'
 sidebar_position: 1

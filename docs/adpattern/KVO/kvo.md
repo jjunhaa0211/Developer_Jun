@@ -41,7 +41,7 @@ sidebar_position: 1
 
 ### 알고 가야할 것
 
-`KVO`를 사용하기 위해서는 `NSOject`를 상속해야합니다.
+`KVO`를 사용하기 위해서는 `NSOject`를 상속해야합니다. 그러므로
 상속을 받아야하기 때문에, `Class`에서만 사용이 가능하고요.
 observe 하려는 프로퍼티에 `@objc attribute`와 `dynamic modifier`를 붙여주어야합니다.
 
@@ -68,21 +68,19 @@ observe 하려는 프로퍼티에 `@objc attribute`와 `dynamic modifier`를 붙
 
 ```swift
 class Person: NSObject {
-		@objc dynamic var name: String
+	@objc dynamic var name: String
 		
-		init(name: Stirng) {
-				self.name = name
-		}
+	init(name: Stirng) {
+		self.name = name
+	}
 }
 
 var person = Person(name: "Junha")
 person.observe(\.name, options: [.old, .new]) { (object, change) in
-		print("name changed form \(change.oldValue) to \(change.newValue)")
+	print("name changed form \(change.oldValue) to \(change.newValue)")
 }
 
-person.name = "준하" // Name changed from Optional("Junha") to Optional("도리")
-
-// 예제 출처[https://velog.io/@jee/KVO-Key-Value-Observing]
+person.name = "준하" // Name changed from Optional("Junha") to Optional("준하")
 ```
 
 프로퍼티 값이 `Junha`에서 `준하`로 변경되어서 `Observer`의 change handler가 호출 했기 때문에 `handler` 내의 `oldValue`와 `newValue`를 가져올 수 있게 된다.
@@ -124,26 +122,14 @@ person.name = "준하" // Name changed from Optional("Junha") to Optional("도�
     
 
 ### KVO의 장점
-
-1. 두 객체 간의 동기화
-    1. `Model`과 `View` 같이 분리된 파트간의 변경 사항 전달
-2. 내부 소스 변경 없이, 상태 변화에 대응할 수 있다
-3. 변경 전/후 값을 파악할 수 있다
+KVO의 주요 장점은 두 객체 간의 동기화를 효과적으로 수행할 수 있다는 것입니다. 예를 들어, `Model`과 `View`와 같이 서로 분리된 부분 사이에서 변경 사항을 전달할 수 있습니다. 또한, 내부 코드를 수정하지 않고도 상태 변화에 적응할 수 있으며, 변경이 일어나기 전과 후의 값을 쉽게 파악할 수 있는 이점도 있습니다.
 
 ### KVO의 단점
-
-1. Objc 런타임에 의존 및 클래스만 구현 가능 (`NSObject` 상속)
-2. `dealloc`될 때 옵저버를 지워줘야 한다.
+KVO는 Objective-C 런타임에 크게 의존하며, 이 기능을 사용하기 위해서는 NSObject를 상속받은 클래스에서만 구현이 가능합니다. 이는 사용의 유연성을 제한할 수 있는 요소입니다. 또한, 객체가 메모리에서 해제될 때(dealloc), 등록된 옵저버들을 반드시 제거해야 합니다. 이를 놓치면 메모리 누수나 예상치 못한 동작 오류를 초래할 위험이 있습니다. 이러한 단점들은 KVO를 사용할 때 고려해야 할 중요한 요소입니다.
 
 ### KVO 왜 사용하는데?
+KVO를 사용하는 이유는 몇 가지 주요 장점 때문입니다. 첫째, `RxSwift`의 `Subscribe`와 유사하게 논리적인 분리를 가능하게 합니다. 예를 들어, `ViewModel`의 특정 프로퍼티가 변경될 때 `View`에서의 변화를 유도하는 등의 상황에서 유용하게 사용될 수 있습니다. 그러나 KVO는 Objective-C 런타임에 의존하기 때문에, `class`가 `final`이거나 `static dispatch`로 사용될 때 보다는 `dynamic dispatch`를 사용해야 하며, 이는 성능에 다소 영향을 줄 수 있습니다.
 
-1. `RxSwift`의 `Subscribe` 처럼 논리적인 분리가 가능해집니다.
-    1. 예시
-        1. `ViewModel`의 어떤 프로퍼티가 변화를 하였을 때, `view`에서의 변화를 유도할 때 사용이 가능합니다.
-        2. 하지만 `KVO`의 경우 objc 런타임을 이동하기 때문에 `class`가 `final`이거나 `static dispatch`로 사용이 가능할 때, 모두 objc의 런타임을 이용해 `dynamic dispatch`를 사용하게 된다면 성능에 조금 떨어질 것 같습니다.
-2. 제일 큰 장점은 내부의 코드를 건드리지 않고 외부에서 해당 값의 변화를 관찰해서 동작하는 것이 가능합니다.
-    1. 비슷한 기능으로 `willSet`과 `didSet`의 경우에는 `class` 내부에 구현해야하지만 `KVO`를 이용한다면 논리적인 분리가 가능해서  외부에서 관찰하는 것이 가능해집니다.
-    2. 외부 라이브러리 또는 남이 짠 코드 또는 SDK를 이용하는 내부의 코드를 건들이기 힘든 상황에서 `NSObject`를 상속받고 접근이 가능하다면 외부에서 관찰할 수 있는 설계를 할 수 있어서 용의합니다.
-        1. 하지만 이제 이것도 `NSObject`를 상속 받고 `@objc dynamic`으로 Objc 런타임 중에 접근이 가능할 경우에만 된다는 것 알아주세요.
-3. 기존 내장 프레임워크에서 아직 objc 코드가 swift로 전달되지 않은 곳에서는 `KVO`를 사용해서 접근이 가능한 것들이 있습니다.
-    1. 예를 들어서 `AVFoundation`같은 것들은 내부 변수들을 참조할때, 사용하는 경우가 많습니다.
+또한, KVO의 가장 큰 장점은 내부 코드를 수정하지 않고도 외부에서 해당 값의 변화를 감지하여 동작을 수행할 수 있다는 것입니다. `willSet`과 `didSet` 같은 기능들은 클래스 내부에 구현해야 하지만, KVO를 사용하면 논리적으로 분리하여 외부에서 감시가 가능합니다. 이는 특히 외부 라이브러리나 다른 사람이 작성한 코드, SDK를 사용하는 상황에서 내부 코드를 수정하기 어려울 때 유리합니다. 하지만 이 기능은 `NSObject`를 상속받고 `@objc dynamic`을 통해 Objective-C 런타임 중에 접근할 수 있는 경우에만 가능합니다.
+
+마지막으로, 기존의 내장 프레임워크에서 아직 Objective-C 코드가 Swift로 전환되지 않은 부분이 있다면, KVO를 통해 접근이 가능한 경우가 있습니다. 예를 들어 `AVFoundation`과 같은 프레임워크에서 내부 변수들을 참조할 때 KVO를 사용하는 경우가 많습니다. 이러한 점들은 KVO를 사용할 때 고려해야 할 중요한 요소들입니다.
