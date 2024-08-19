@@ -1,6 +1,6 @@
 ---
 title: "UserDefault"
-slug: "/userDefault"
+slug: "/blog/foundation/userDefault"
 excerpt: "userDefault 방법을 알려드립니다."
 sidebar_position: 4
 ---
