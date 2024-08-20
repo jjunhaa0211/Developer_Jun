@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">µFeatures Architecture | Developer Jun</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://jjunhaa0211.github.io/Developer_Jun/docs/chapterVII/µFeatures-architecture"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="µFeatures Architecture | Developer Jun"><meta data-rh="true" name="description" content="💡 Apple OS 애플리케이션을 구성하여 확장성을 활성화하고 빌드 및 테스트 주기를 최적화하는 아키텍처 접근 방식"><meta data-rh="true" property="og:description" content="💡 Apple OS 애플리케이션을 구성하여 확장성을 활성화하고 빌드 및 테스트 주기를 최적화하는 아키텍처 접근 방식"><link data-rh="true" rel="icon" href="/Developer_Jun/img/favicon-32x32.png"><link data-rh="true" rel="canonical" href="https://jjunhaa0211.github.io/Developer_Jun/docs/chapterVII/µFeatures-architecture"><link data-rh="true" rel="alternate" href="https://jjunhaa0211.github.io/Developer_Jun/docs/chapterVII/µFeatures-architecture" hreflang="en"><link data-rh="true" rel="alternate" href="https://jjunhaa0211.github.io/Developer_Jun/docs/chapterVII/µFeatures-architecture" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://2KKA2HFUSD-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Developer Jun" href="/Developer_Jun/opensearch.xml"><link rel="stylesheet" href="/Developer_Jun/assets/css/styles.d8ebc84b.css">
-<script src="/Developer_Jun/assets/js/runtime~main.107e59c5.js" defer="defer"></script>
+<script src="/Developer_Jun/assets/js/runtime~main.0d2b4fe3.js" defer="defer"></script>
 <script src="/Developer_Jun/assets/js/main.5e133da8.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -79,7 +79,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="5가지-타겟">5가지 타겟<a href="#5가지-타겟" class="hash-link" aria-label="Direct link to 5가지 타겟" title="Direct link to 5가지 타겟">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="app">app<a href="#app" class="hash-link" aria-label="Direct link to app" title="Direct link to app">​</a></h3>
 <ul>
-<li>실제 프로덕트 레벨을 관리합니다. APP은 재사용 보다는 모든 것을 합치는 Composition 역활을 함</li>
+<li>실제 프로덕트 레벨을 관리합니다. APP은 재사용 보다는 모든 것을 합치는 Composition 역할을 함</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="feature">Feature<a href="#feature" class="hash-link" aria-label="Direct link to Feature" title="Direct link to Feature">​</a></h3>
 <ul>
@@ -89,14 +89,14 @@
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="domain">Domain<a href="#domain" class="hash-link" aria-label="Direct link to Domain" title="Direct link to Domain">​</a></h3>
 <ul>
-<li>하나의 관심사 별 역활을 담당함</li>
+<li>하나의 관심사 별 역할을 담당함</li>
 <li>api 로직과 내부 Core 로직을 묶어서 Featrue에서 사용할 수 있도록 합니다.</li>
 <li>외부 API에서 DTO와 Feature에서 필요한 Model 등을 담당합니다.</li>
 <li>CoreNetwork와 CoreKeyChain을 디펜던시로 갖습니다.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="core">Core<a href="#core" class="hash-link" aria-label="Direct link to Core" title="Direct link to Core">​</a></h3>
 <ul>
-<li>Core는 일반적인 역활을 함</li>
+<li>Core는 일반적인 역할을 함</li>
 <li>재사용성을 높이기 위해서 사용하는 툴</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="shared">Shared<a href="#shared" class="hash-link" aria-label="Direct link to Shared" title="Direct link to Shared">​</a></h3>
