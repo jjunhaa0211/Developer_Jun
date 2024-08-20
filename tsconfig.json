@@ -1,7 +1,7 @@
 {
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": "https://jjunhaa0211.github.io/Developer_Jun/"
   },
   "exclude": ["./node_modules/*"]
 }
