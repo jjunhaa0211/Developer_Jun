@@ -1,8 +1,0 @@
----
-title: '데이터타입'
-slug: '/grammar/dataType'
-excerpt: 'dataType을 설명합니다.'
-sidebar_position: 1
----
-
-# dataType을 설명합니다.
