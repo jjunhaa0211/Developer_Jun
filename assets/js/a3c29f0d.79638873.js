@@ -1,0 +1,56 @@
+"use strict";(self.webpackChunkimx_docs=self.webpackChunkimx_docs||[]).push([[7473],{47330:(e,t,n)=>{n.r(t),n.d(t,{assets:()=>y,contentTitle:()=>j,default:()=>A,frontMatter:()=>g,metadata:()=>C,toc:()=>w});var r=n(74848),a=n(28453),l=n(11470),o=n(19365),i=n(96540),s=n(33540);const u=s.Ay.div`
+  font-family: ${e=>e.font||"Pretendard"};
+  color: ${e=>e.textColor||"black"};
+  text-align: ${e=>e.isCenter?"center":"left"};
+  line-height: 1.5;
+  font-size: ${e=>e.size};
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: ${e=>e.numberOfLineCount||1};
+  overflow: auto;
+  word-break: break-all;
+  max-height: 300px;
+`,c=e=>{let{text:t="",font:n="Pretendard, sans-serif",textColor:a="black",isCenter:l=!0,numberOfLineCount:o=1,size:i="16px"}=e;return(0,r.jsx)(u,{font:n,textColor:a,isCenter:l,numberOfLineCount:o,size:i,children:t})},d=s.Ay.div`
+  display: flex;
+  padding: 20px;
+  background: #ffff;
+  height: 30vh;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+`,f=s.Ay.div`
+  width: 30%;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+`,p=s.Ay.div`
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`,b=s.Ay.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+`,h=s.Ay.label`
+  font-weight: bold;
+  color: #000;
+  font-size: 0.8rem;
+  margin-right: 10px;
+`,x=s.Ay.input`
+  padding: 8px;
+  border: 1px solid #ccc;
+  /* color: #fff; */
+  border-radius: 4px;
+  width: 60%;
+`,m=s.Ay.select`
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 60%;
+  /* background: white; */
+`,v=()=>{const[e,t]=(0,i.useState)({text:"Sample Text",font:"Pretendard, sans-serif",textColor:"#000000",isCenter:!0,numberOfLineCount:1,size:"16px"}),n=e=>{const{name:n,value:r,type:a}=e.target;t((t=>({...t,[n]:"checkbox"===a?e.target.checked:r})))};return(0,r.jsxs)(d,{children:[(0,r.jsxs)(f,{children:[(0,r.jsxs)(b,{children:[(0,r.jsx)(h,{htmlFor:"text",children:"Text:"}),(0,r.jsx)(x,{id:"text",type:"text",name:"text",value:e.text,onChange:n})]}),(0,r.jsxs)(b,{children:[(0,r.jsx)(h,{htmlFor:"font",children:"Font:"}),(0,r.jsxs)(m,{id:"font",name:"font",value:e.font,onChange:n,children:[(0,r.jsx)("option",{value:"Pretendard, sans-serif",children:"Pretendard"}),(0,r.jsx)("option",{value:"Roboto, sans-serif",children:"Roboto"}),(0,r.jsx)("option",{value:"Arial, sans-serif",children:"Arial"}),(0,r.jsx)("option",{value:"Georgia, serif",children:"Georgia"}),(0,r.jsx)("option",{value:"Courier New, monospace",children:"Courier New"})]})]}),(0,r.jsxs)(b,{children:[(0,r.jsx)(h,{htmlFor:"textColor",children:"Color:"}),(0,r.jsx)(x,{id:"textColor",type:"color",name:"textColor",value:e.textColor,onChange:n})]}),(0,r.jsxs)(b,{children:[(0,r.jsx)(h,{htmlFor:"isCenter",children:"Center:"}),(0,r.jsx)(x,{id:"isCenter",type:"checkbox",name:"isCenter",checked:e.isCenter,onChange:n})]}),(0,r.jsxs)(b,{children:[(0,r.jsx)(h,{htmlFor:"numberOfLineCount",children:"Lines:"}),(0,r.jsx)(x,{id:"numberOfLineCount",type:"number",name:"numberOfLineCount",value:e.numberOfLineCount,onChange:n,min:1})]}),(0,r.jsxs)(b,{children:[(0,r.jsx)(h,{htmlFor:"size",children:"Font Size:"}),(0,r.jsx)(x,{id:"size",type:"text",name:"size",value:e.size,onChange:n})]})]}),(0,r.jsx)(p,{children:(0,r.jsx)(c,{...e})})]})},g={title:"Label",slug:"/label",sidebar_position:6},j=void 0,C={id:"guides/component/Label",title:"Label",description:"JNLabel\ub294 \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc5d0\uc11c label\uc744 \ud45c\ud604\ud55c \ud074\ub798\uc2a4\uc785\ub2c8\ub2e4.",source:"@site/docs/guides/component/Label.md",sourceDirName:"guides/component",slug:"/label",permalink:"/Developer_Jun/docs/label",draft:!1,unlisted:!1,editUrl:"https://github.com/immutable/imx-docs/tree/main/docs/guides/component/Label.md",tags:[],version:"current",sidebarPosition:6,frontMatter:{title:"Label",slug:"/label",sidebar_position:6},sidebar:"tutorialSidebar",previous:{title:"DisappearedAlert \uac00\uc774\ub4dc",permalink:"/Developer_Jun/docs/disappearedAlert"},next:{title:"Calendar",permalink:"/Developer_Jun/docs/calendar"}},y={},w=[{value:"iOS (Swift) \uc0ac\uc6a9 \ubc29\ubc95",id:"ios-swift-\uc0ac\uc6a9-\ubc29\ubc95",level:3},{value:"FE (React) \uc0ac\uc6a9 \ubc29\ubc95",id:"fe-react-\uc0ac\uc6a9-\ubc29\ubc95",level:3}];function k(e){const t={code:"code",h3:"h3",p:"p",pre:"pre",...(0,a.R)(),...e.components};return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)(t.p,{children:[(0,r.jsx)(t.code,{children:"JNLabel"}),"\ub294 \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc5d0\uc11c label\uc744 \ud45c\ud604\ud55c \ud074\ub798\uc2a4\uc785\ub2c8\ub2e4."]}),"\n",(0,r.jsx)(v,{}),"\n",(0,r.jsxs)(l.A,{children:[(0,r.jsxs)(o.A,{value:"ios",label:"iOS (Swift)",default:!0,children:[(0,r.jsx)(t.h3,{id:"ios-swift-\uc0ac\uc6a9-\ubc29\ubc95",children:"iOS (Swift) \uc0ac\uc6a9 \ubc29\ubc95"}),(0,r.jsxs)(t.p,{children:["\uba3c\uc800 Swift \ud30c\uc77c\uc5d0 ",(0,r.jsx)(t.code,{children:"JNLabel"})," \ud074\ub798\uc2a4\ub97c \uac00\uc838\uc635\ub2c8\ub2e4."]}),(0,r.jsx)(t.pre,{children:(0,r.jsx)(t.code,{className:"language-swift",children:'private let testLabel = JNLabel(text: "test",\n                                font: UIFont.Pretendard.bodyMedium,\n                                textColor: .gray,\n                                isCenter: false,\n                                numberOfLineCount: 1)\n'})})]}),(0,r.jsxs)(o.A,{value:"fe",label:"FE (React)",children:[(0,r.jsx)(t.h3,{id:"fe-react-\uc0ac\uc6a9-\ubc29\ubc95",children:"FE (React) \uc0ac\uc6a9 \ubc29\ubc95"}),(0,r.jsx)(t.pre,{children:(0,r.jsx)(t.code,{className:"language-jsx",children:'const App = () => {\n  return (\n    <div>\n      <JNLabel\n        text="Hello, World!"\n        font="Arial, sans-serif"\n        textColor="#FF6347"\n        isCenter={true}\n        numberOfLineCount={2}\n      />\n    </div>\n  );\n}\n'})})]})]})]})}function A(e={}){const{wrapper:t}={...(0,a.R)(),...e.components};return t?(0,r.jsx)(t,{...e,children:(0,r.jsx)(k,{...e})}):k(e)}},19365:(e,t,n)=>{n.d(t,{A:()=>o});n(96540);var r=n(18215);const a={tabItem:"tabItem_Ymn6"};var l=n(74848);function o(e){let{children:t,hidden:n,className:o}=e;return(0,l.jsx)("div",{role:"tabpanel",className:(0,r.A)(a.tabItem,o),hidden:n,children:t})}},11470:(e,t,n)=>{n.d(t,{A:()=>y});var r=n(96540),a=n(18215),l=n(23104),o=n(56347),i=n(205),s=n(57485),u=n(31682),c=n(70679);function d(e){return r.Children.toArray(e).filter((e=>"\n"!==e)).map((e=>{if(!e||(0,r.isValidElement)(e)&&function(e){const{props:t}=e;return!!t&&"object"==typeof t&&"value"in t}(e))return e;throw new Error(`Docusaurus error: Bad <Tabs> child <${"string"==typeof e.type?e.type:e.type.name}>: all children of the <Tabs> component should be <TabItem>, and every <TabItem> should have a unique "value" prop.`)}))?.filter(Boolean)??[]}function f(e){const{values:t,children:n}=e;return(0,r.useMemo)((()=>{const e=t??function(e){return d(e).map((e=>{let{props:{value:t,label:n,attributes:r,default:a}}=e;return{value:t,label:n,attributes:r,default:a}}))}(n);return function(e){const t=(0,u.XI)(e,((e,t)=>e.value===t.value));if(t.length>0)throw new Error(`Docusaurus error: Duplicate values "${t.map((e=>e.value)).join(", ")}" found in <Tabs>. Every value needs to be unique.`)}(e),e}),[t,n])}function p(e){let{value:t,tabValues:n}=e;return n.some((e=>e.value===t))}function b(e){let{queryString:t=!1,groupId:n}=e;const a=(0,o.W6)(),l=function(e){let{queryString:t=!1,groupId:n}=e;if("string"==typeof t)return t;if(!1===t)return null;if(!0===t&&!n)throw new Error('Docusaurus error: The <Tabs> component groupId prop is required if queryString=true, because this value is used as the search param name. You can also provide an explicit value such as queryString="my-search-param".');return n??null}({queryString:t,groupId:n});return[(0,s.aZ)(l),(0,r.useCallback)((e=>{if(!l)return;const t=new URLSearchParams(a.location.search);t.set(l,e),a.replace({...a.location,search:t.toString()})}),[l,a])]}function h(e){const{defaultValue:t,queryString:n=!1,groupId:a}=e,l=f(e),[o,s]=(0,r.useState)((()=>function(e){let{defaultValue:t,tabValues:n}=e;if(0===n.length)throw new Error("Docusaurus error: the <Tabs> component requires at least one <TabItem> children component");if(t){if(!p({value:t,tabValues:n}))throw new Error(`Docusaurus error: The <Tabs> has a defaultValue "${t}" but none of its children has the corresponding value. Available values are: ${n.map((e=>e.value)).join(", ")}. If you intend to show no default tab, use defaultValue={null} instead.`);return t}const r=n.find((e=>e.default))??n[0];if(!r)throw new Error("Unexpected error: 0 tabValues");return r.value}({defaultValue:t,tabValues:l}))),[u,d]=b({queryString:n,groupId:a}),[h,x]=function(e){let{groupId:t}=e;const n=function(e){return e?`docusaurus.tab.${e}`:null}(t),[a,l]=(0,c.Dv)(n);return[a,(0,r.useCallback)((e=>{n&&l.set(e)}),[n,l])]}({groupId:a}),m=(()=>{const e=u??h;return p({value:e,tabValues:l})?e:null})();(0,i.A)((()=>{m&&s(m)}),[m]);return{selectedValue:o,selectValue:(0,r.useCallback)((e=>{if(!p({value:e,tabValues:l}))throw new Error(`Can't select invalid tab value=${e}`);s(e),d(e),x(e)}),[d,x,l]),tabValues:l}}var x=n(92303);const m={tabList:"tabList__CuJ",tabItem:"tabItem_LNqP"};var v=n(74848);function g(e){let{className:t,block:n,selectedValue:r,selectValue:o,tabValues:i}=e;const s=[],{blockElementScrollPositionUntilNextRender:u}=(0,l.a_)(),c=e=>{const t=e.currentTarget,n=s.indexOf(t),a=i[n].value;a!==r&&(u(t),o(a))},d=e=>{let t=null;switch(e.key){case"Enter":c(e);break;case"ArrowRight":{const n=s.indexOf(e.currentTarget)+1;t=s[n]??s[0];break}case"ArrowLeft":{const n=s.indexOf(e.currentTarget)-1;t=s[n]??s[s.length-1];break}}t?.focus()};return(0,v.jsx)("ul",{role:"tablist","aria-orientation":"horizontal",className:(0,a.A)("tabs",{"tabs--block":n},t),children:i.map((e=>{let{value:t,label:n,attributes:l}=e;return(0,v.jsx)("li",{role:"tab",tabIndex:r===t?0:-1,"aria-selected":r===t,ref:e=>s.push(e),onKeyDown:d,onClick:c,...l,className:(0,a.A)("tabs__item",m.tabItem,l?.className,{"tabs__item--active":r===t}),children:n??t},t)}))})}function j(e){let{lazy:t,children:n,selectedValue:l}=e;const o=(Array.isArray(n)?n:[n]).filter(Boolean);if(t){const e=o.find((e=>e.props.value===l));return e?(0,r.cloneElement)(e,{className:(0,a.A)("margin-top--md",e.props.className)}):null}return(0,v.jsx)("div",{className:"margin-top--md",children:o.map(((e,t)=>(0,r.cloneElement)(e,{key:t,hidden:e.props.value!==l})))})}function C(e){const t=h(e);return(0,v.jsxs)("div",{className:(0,a.A)("tabs-container",m.tabList),children:[(0,v.jsx)(g,{...t,...e}),(0,v.jsx)(j,{...t,...e})]})}function y(e){const t=(0,x.A)();return(0,v.jsx)(C,{...e,children:d(e.children)},String(t))}},28453:(e,t,n)=>{n.d(t,{R:()=>o,x:()=>i});var r=n(96540);const a={},l=r.createContext(a);function o(e){const t=r.useContext(l);return r.useMemo((function(){return"function"==typeof e?e(t):{...t,...e}}),[t,e])}function i(e){let t;return t=e.disableParentContext?"function"==typeof e.components?e.components(a):e.components||a:o(e.components),r.createElement(l.Provider,{value:t},e.children)}}}]);

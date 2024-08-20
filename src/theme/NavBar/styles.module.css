@@ -1,0 +1,68 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/*
+Hide toggle in small viewports
+ */
+
+ @media screen and (max-width: 997px) {
+   .toggle {
+     display: none;
+   }
+ }
+ 
+ .navbarHideable {
+   transition: transform var(--ifm-transition-fast) ease;
+ }
+ 
+ .navbarHidden {
+   transform: translate3d(0, calc(-100% - 2px), 0);
+ }
+ 
+ .githubIcon {
+   left: 0%;
+   right: 0.41%;
+   bottom: 1.18%;
+   margin-right: 32px;
+   margin-top: 7px;
+ }
+ 
+ .menuItemLinkMobile {
+   font-size: 18px;
+   color: #f2f2f2;
+ }
+ 
+ .navbar__item__style {
+   margin-right: 25px;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 24px;
+   color: #f2f2f2;
+   padding: 0;
+ }
+ 
+ .githubIconSideBar {
+   left: 0%;
+   right: 0.41%;
+   bottom: 1.18%;
+   margin-left: 15px;
+ }
+ 
+ @media only screen and (max-width: 800px) {
+   .DocSearch-Button {
+     display: none;
+   }
+ 
+   .githubIcon {
+     display: none;
+   }
+ 
+   .searchIcon {
+     margin-left: 150px;
+   }
+ }

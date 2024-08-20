@@ -1,0 +1,137 @@
+---
+title: 'DisappearedAlert 가이드'
+slug: '/disappearedAlert'
+excerpt: "사라지는 알럿을 만들었습니다."
+sidebar_position: 4
+---
+
+# iOS 사용자 정의 알림 시스템 상세 가이드
+
+이 문서는 iOS 애플리케이션용으로 설계된 여러 종류의 사용자 정의 알림 뷰 구현에 대해 설명합니다. 이 가이드는 `JNAlertOnlyTitleView`, `JNAlertBoxView`, 그리고 `JNAlertBarView` 세 가지 주요 컴포넌트에 대한 상세한 설명과 사용 방법을 포함하고 있습니다.
+
+## JNAlertOnlyTitleView
+
+`JNAlertOnlyTitleView`는 단일 제목을 사용하여 간단한 알림을 표시하는 뷰입니다.
+
+### 초기화 파라미터
+
+- **title**: String? - 알림에 표시될 제목.
+- **height**: CGFloat - 알림 뷰의 높이.
+- **yPosition**: CGFloat? - 알림이 화면에 표시될 y축 위치.
+- **duration**: TimeInterval - 알림이 화면에 남아있을 시간.
+- **scale**: CGFloat - 알림 출현 및 사라짐 효과의 크기 비율.
+- **dismissTime**: TimeInterval - 알림이 자동으로 사라지기까지의 시간.
+
+### 주요 함수
+
+- **present(on:view: UIView, completion: (() -> Void)?)**: 알림을 특정 뷰에 표시합니다.
+- **dismiss()**: 알림을 수동으로 종료합니다.
+
+## JNAlertBoxView
+
+`JNAlertBoxView`는 제목, 부제목, 아이콘을 포함하여 더 상세한 정보를 제공하는 알림 박스입니다.
+
+### 초기화 파라미터
+
+- **title**: String? - 알림의 제목.
+- **subtitle**: String? - 알림의 부제목.
+- **icon**: AlertIcon? - 알림에 사용할 아이콘.
+- **dismissByTap**: Bool - 탭으로 알림을 닫을 수 있는지 여부.
+- **dismissInTime**: Bool - 알림이 자동으로 사라지는지 여부.
+- **duration**: TimeInterval - 알림이 화면에 표시되는 시간.
+- **presentDismissDuration**: TimeInterval - 알림이 표시되고 사라지는 데 걸리는 시간.
+- **presentDismissScale**: CGFloat - 알림 출현 및 사라짐 효과의 크기 비율.
+
+### 주요 함수
+
+- **present(on:view: UIView, completion: (() -> Void)?)**: 알림을 특정 뷰에 표시합니다.
+- **dismiss()**: 알림을 수동으로 종료합니다.
+
+## JNAlertBarView
+
+`JNAlertBarView`는 화면 하단에 표시되는 알림 바로, 다양한 설정 옵션을 제공합니다.
+
+### 초기화 파라미터
+
+- **title**: String? - 알림 바의 제목.
+- **subtitle**: String? - 알림의 부제목.
+- **icon**: AlertIcon? - 알림에 사용할 아이콘.
+- **effect**: UIBlurEffect.Style - 배경에 사용될 블러 효과의 스타일.
+- **dismissByTap**: Bool - 탭으로 알림을 닫을 수 있는지 여부.
+- **dismissInTime**: Bool - 알림이 자동으로 사라지는지 여부.
+- **duration**: TimeInterval - 알림이 화면에 표시되는 시간.
+- **presentDismissDuration**: TimeInterval - 알림이 표시되고 사라지는 데 걸리는 시간.
+- **presentDismissScale**: CGFloat - 알림 출현 및 사라짐 효과의 크기 비율.
+- **cornerRadius**: CGFloat - 알림 모서리의 둥근 정도.
+
+### 주요 함수
+
+- **present(on:view: UIView, completion: (() -> Void)?)**: 알림을 특정 뷰에 표시합니다.
+- **dismiss()**: 알림을 수동으로 종료합니다.
+
+## 코드 예제
+
+```swift
+import UIKit
+import JAlert
+
+class ViewController: UIViewController {
+    let alertView1 = JNAlertOnlyTitleView(title: "링크가 복사되었어요", yPosition: 100, dismissTime: 10).then {
+        $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .bold)
+        $0.titleLabel?.textColor = .white
+        $0.backgroundColor = .gray
+    }
+
+    let alertView2 = JNAlertBoxView(
+        title: "안녕!",
+        subtitle: "Your operation was completed successfully.",
+        icon: .done,
+        dismissByTap: false,
+        dismissInTime: false,
+        duration: 10,
+        presentDismissDuration: 10,
+        presentDismissScale: 2.0
+    ).then {
+        $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .bold)
+        $0.titleLabel?.textColor = .black
+        $0.backgroundColor = .gray
+    }
+
+    let alertView3 = JNAlertBarView(
+        title: "New Update Available",
+        subtitle: "Version 1.1.0 is now",
+        icon: .done,
+        effect: .systemMaterial,
+        dismissByTap: true,
+        dismissInTime: true,
+        duration: 10.0,
+        presentDismissDuration: 0.3,
+        presentDismissScale: 1.0,
+        cornerRadius: 10
+    )
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = .white
+        alertView1.present(on: self.view)
+        alertView2.present(on: self.view)
+        alertView3.present(on: this.view)
+    }
+}
+
+```
+
+#### Swift Package Manager 설치 방법
+
+JAlert 라이브러리를 사용하기 위해서는 Swift Package Manager를 통해 설치할 수 있습니다.
+
+1. Xcode에서 프로젝트를 열고, 프로젝트 이름을 클릭하여 프로젝트 설정에 접근합니다.
+2. 좌측 패널에서 'Swift Packages' 탭을 선택합니다.
+3. 우측 상단의 '+' 버튼을 클릭하여 패키지 추가 과정을 시작합니다.
+4. 패키지 저장소 URL에 `https://github.com/Junha-SDK/JAlert.git` 입력하고 'Next'를 클릭합니다.
+5. 권장 버전의 0.1.0입니다!
+
+```swift
+.package(url: "https://github.com/Junha-SDK/JUtile", from: "0.1.0")
+```
