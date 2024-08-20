@@ -55,7 +55,7 @@ const Homepage = () => {
             subtitle={
               <>
                 iOS, React를 중점으로 설명합니다.
-                <br /> 컨포넌트가 올라가거나 블로그 글이 올라갑니다!
+                <br /> 컨포넌트가 올라가거나 블로그 글이 올라갑니다! <br />
               </>
             }
             className={styles.heroTitle}
