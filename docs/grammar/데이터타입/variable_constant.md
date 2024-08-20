@@ -1,6 +1,6 @@
 ---
 title: '상수와 변수 선언'
-slug: '/grammar/variable_constant'
+slug: '/grammar/variableConstant'
 excerpt: '상수와 변수에 대한 설명합니다.'
 sidebar_position: 4
 ---

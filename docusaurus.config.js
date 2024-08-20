@@ -14,11 +14,10 @@ const config = {
     locales: ['en'],
   },
   title: 'Developer Jun',
-  tagline:
-    '',
-  url: 'https://docs.immutable.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
+  tagline: '',
+  url: 'https://jjunhaa0211.github.io',
+  baseUrl: '/Developer_Jun/',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon-32x32.png',
   organizationName: 'jjunhaa0211',
@@ -63,7 +62,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl: 'https://github.com/immutable/imx-docs/tree/main/',
         },
         theme: {
