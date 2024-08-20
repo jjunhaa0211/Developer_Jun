@@ -60,11 +60,11 @@ VIPER 는 MVC에 비해서 VIPER는 더 추상적이었으며 가볍게 유닛 �
 - RIB의 모든 컴포넌트를 생성하고 DI를 정의
 - Router, Interactor, View, Component를 생성
 - 각 컴포너트 클래스들을 생성하고 자식 Interactor와 부모 Interactor의 Listenr 인터페이스 연결을 구성하고 Router를 Output으로 반환하게 된다.
-- Builder는 본인의 역활을 위해서 Buildable와 Builder이 있습니다.
+- Builder는 본인의 역할을 위해서 Buildable와 Builder이 있습니다.
 
 ### View
 
-- View는 UI 화면을 구성하고 생성하며, 사용자로 부터 들어온 UIEvent를 Presenter에게 전달하거나 UI를 업데이트하는 역활을 합니다.
+- View는 UI 화면을 구성하고 생성하며, 사용자로 부터 들어온 UIEvent를 Presenter에게 전달하거나 UI를 업데이트하는 역할을 합니다.
 
 ### Presenter
 

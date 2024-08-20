@@ -9,7 +9,7 @@ sidebar_position: 1
 
 `UIViewController`는 `UIKit` 앱의 **뷰 계층 구조를 관리하는 객체**라고 명시되어있습니다. 이는 앱의 근간을 이루는 객체로 모든 앱에 최소 하나 이상의 `UIViewController`를 가지게 됩니다. 왜냐하면 **사용자가 화면을 보는 것에 대한 관리 기능을 제공하는 객체**이기 때문입니다. 따라서 저희가 새로운 **xcode project**를 생성할 때 기본적으로 `ViewController`가 생성되는 이유 중 하나가 됩니다.
 
-## UIViewController의 역활
+## UIViewController의 역할
 
 먼저, 데이터의 변화에 따라 뷰의 콘텐츠를 업데이트합니다. 또한 뷰와 함께 사용자 상호작용에 응답하며 이벤트를 처리합니다. 이 외에도 뷰의 리사이징과 전체 인터페이스 레이아웃을 관리하며, 다른 ViewController들과의 화면 전환을 담당합니다. 마지막으로, 여러 ViewController를 조합해 앱을 구성하는 역할을 합니다.
 
@@ -76,7 +76,7 @@ Model 혹은 Navigation의 형태 또 다른 `UIViewController`가 화면 위에
 
 이 메소드를 직역하자면 “View가 보일 것이다” 라고 해석됩니다.
 
-`UIViewController`가 **화면에 나타나기 직전에 호출되는 메서드**입니다. 이를 다른말고 뷰가 계층 구조에 추가되기 직전에 호출한다고도 합니다.
+`UIViewController`가 **화면에 나타나기 직전에 호출되는 메서드**입니다. 이를 다른말로 뷰가 계층 구조에 추가되기 직전에 호출한다고도 합니다.
 일반적으로 뷰를 업데이트하거나 필요한 애니메이션을 추가합니다.
 
 Model 혹은 Navigation의 형태 등 또 다른 `UIViewController`가 화면 위에 보이게 된 이후 사라질 경우, viewWillAppear가 호출됩니다.

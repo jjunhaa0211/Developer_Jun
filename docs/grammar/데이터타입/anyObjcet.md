@@ -52,9 +52,9 @@ let view: AnyObject = UIView()
 
 위의 예시에서, view는 UIView 인스턴스이며, AnyObject 타입으로 선언되어 있습니다. 이렇게 하면 Objective-C와의 호환성을 유지하면서 Swift에서 Objective-C 객체를 다룰 수 있습니다.
 
-위 말에 Objective-C의 id 타입을 반환한다는 말이 있습니다. id란? C언어의 포인터 개념, void*의 역활을 한다. 랍니다… 
+위 말에 Objective-C의 id 타입을 반환한다는 말이 있습니다. id란? C언어의 포인터 개념, void*의 역할을 한다. 랍니다… 
 
-C언어의 포인터는 메모리의 주소값을 저장하는 변수이기에 즉 objective-C 환경에서 만들어진 클래스 객체인 UIView를 AnyObject를 활용해서 Swift와 Objective-C간에 타입을 맞춰주는 역활이다.
+C언어의 포인터는 메모리의 주소값을 저장하는 변수이기에 즉 objective-C 환경에서 만들어진 클래스 객체인 UIView를 AnyObject를 활용해서 Swift와 Objective-C간에 타입을 맞춰주는 역할이다.
 
 ```swift
 import Foundation

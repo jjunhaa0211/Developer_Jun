@@ -41,7 +41,7 @@ Uber 용도의 프레임워크 설계할 때 아래 원칙을 준수해주세요
 - **Router**
     - Interactor를 수신하고 그 출력을 하위 RIB 연결 및 분리로 변환합니다.
     - 라우터의 존재 이유는 아래 2개입니다
-        - 라우터는 하위 Interactor를 모의 처리하거나 그 존재에 신경 쓸 필요 없이 복잡한 Interactor 논리를 쉽게 테스트할 수 있도록 해주는 Humble Object의 역활을 합니다.
+        - 라우터는 하위 Interactor를 모의 처리하거나 그 존재에 신경 쓸 필요 없이 복잡한 Interactor 논리를 쉽게 테스트할 수 있도록 해주는 Humble Object의 역할을 합니다.
         - 라우터는 상위 Interactor와 하위 Interactor 사이에 추가 추상화 계층을 생성하고 Interactor간의 동기식 통신이 조금 더 어려워지고 RIB 간의 직접 연결 대신 반응형 통신의 채택이 권장됩니다.
 - **Builder**
     - 빌더의 책임은 모든 RIB의 구성 클래스와 각 RIB의 자식에 대한 빌더를 인스턴스화 하는 것 입니다.

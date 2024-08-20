@@ -86,7 +86,7 @@ tuist 친구들은 네이티브 도구와 기술의 사용을 최적화하여 �
 
 ### app
 
-- 실제 프로덕트 레벨을 관리합니다. APP은 재사용 보다는 모든 것을 합치는 Composition 역활을 함
+- 실제 프로덕트 레벨을 관리합니다. APP은 재사용 보다는 모든 것을 합치는 Composition 역할을 함
 
 ### Feature
 
@@ -96,14 +96,14 @@ tuist 친구들은 네이티브 도구와 기술의 사용을 최적화하여 �
 
 ### Domain
 
-- 하나의 관심사 별 역활을 담당함
+- 하나의 관심사 별 역할을 담당함
 - api 로직과 내부 Core 로직을 묶어서 Featrue에서 사용할 수 있도록 합니다.
 - 외부 API에서 DTO와 Feature에서 필요한 Model 등을 담당합니다.
 - CoreNetwork와 CoreKeyChain을 디펜던시로 갖습니다.
 
 ### Core
 
-- Core는 일반적인 역활을 함
+- Core는 일반적인 역할을 함
 - 재사용성을 높이기 위해서 사용하는 툴
 
 ### Shared

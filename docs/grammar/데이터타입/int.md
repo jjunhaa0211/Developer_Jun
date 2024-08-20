@@ -30,7 +30,6 @@ print("총 걸음 수: \(totalSteps)")  // 출력: 총 걸음 수: 3500
 
 var memorySize: UInt = 512
 print("메모리 크기: \(memorySize) MB")
-
 ```
 
 이 예제에서는 `Int`를 사용하여 총 걸음 수를 계산하고, `UInt`를 사용하여 메모리 크기를 표현하는 방법을 보여줍니다.

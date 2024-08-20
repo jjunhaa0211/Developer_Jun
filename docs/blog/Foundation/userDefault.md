@@ -39,7 +39,6 @@ open func removeObject(forKey defaultName: String)
 UserDefaults.standard.set("값", forKey: "키")
 let value = UserDefaults.standard.string(forKey: "키")
 UserDefaults.standard.removeObject(forKey: "키")
-
 ```
 
 ## 사용자 꿀팁

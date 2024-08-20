@@ -61,7 +61,7 @@ class AppCoordinator: Coordinator {
 
 저희는 간단한 인사하는 앱을 만들기 위해 greeting이라는 변수와 if문을 작성했습니다.
 
-그럼 start는 어떤 역활을 할까요?
+그럼 start는 어떤 역할을 할까요?
 
 start는 컨트롤러 생성, 화면 전환 및 종속성 주입의 역할을 합니다. 쉽게 생각해서 start에서 화면 전환 등등의 이벤트가 방출됩니다.
 

@@ -17,7 +17,7 @@ sidebar_position: 1
 > Refined Abstraction -> Abstraction -> Implementor -> Concrete Implementor
 
 - Refined Abstraction
-    - Abstraction에서 정의한 인터페이스를 확장하는 역활을 합니다.
+    - Abstraction에서 정의한 인터페이스를 확장하는 역할을 합니다.
 - Abstraction
     - 추상화의 인터페이스를 정의합니다.
     - Implementor 타입의 객체에 대한 참조를 유지합니다.
