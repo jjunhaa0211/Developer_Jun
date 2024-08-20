@@ -12,7 +12,7 @@ const config = {
   title: 'Developer Jun',
   tagline: '',
   url: 'https://jjunhaa0211.github.io',
-  baseUrl: '/',
+  baseUrl: '/Developer_Jun/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon-32x32.png',
