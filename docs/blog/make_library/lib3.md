@@ -11,11 +11,11 @@ CocoaPods는 iOS 및 macOS 프로젝트에서 의존성을 관리하는 데 사�
 ### CocoaPods 설치
 
 1. CocoaPods을 다운 받습니다.
-```swift
+```bash
 sudo gem install cocoapods
 ```
 만약 CocoaPods이 이미 있다면 아래 메세지나 나올 것 입니다.
-```swift
+```bash
 1 gem installe
 ```
 
@@ -23,16 +23,16 @@ sudo gem install cocoapods
 Prodfile은 프로젝트에서 사용할 라이브러리를 명시하는 파일입니다. 이 파일에서 어떤 라이브러리를 사용할지, 그리고 각 라이브러리의 버전을 지정할 수 있습니다. 예를 들어 Alamofire를 사용한다면 아래와 같이 하면 됩니다.
 
 Pod 파일을 먼저 추가해줍니다.
-```swift
+```bash
 pod init
 ```
 
 그리고 내부 Pod 파일에 접근하여 아래 명력어를 적어줍니다.
-```swift
+```bash
 pod 'Alamofire'
 ```
 만약 특정 버전을 원한다면 아래와 같이 작성하면 됩니다!
-```swift
+```bash
 pod 'Alamofire', '1.0'
 ```
 
@@ -44,23 +44,23 @@ Podfile.lock 파일은 Podfile에 명시된 라이브러리들의 버전을 추�
 
 ### Pod 설치 및 업데이트
 새로운 라이브러리를 추가하거나 기존 라이브러리를 수정한 후 아래 명령어를 사용하면 프로젝트에 반영합니다.
-```swift
+```bash
 pod install
 ```
 
 만약 M1 칩이 탐재된 Mac을 사용하는 경우에는 아래 명령어를 사용합니다.
-```swift
+```bash
 arch -x86_64 pod install
 ```
 
 라이브러리를 최신 버전으로 업데이트하려면 아래 명령어를 사용합니다.
-```swift
+```bash
 pod update { 팟 이름 }
 ```
 
 ### 라이브러리 생성하는 방법
 새로운 라이브러리를 만들고 싶다면, 다음 명령어를 사용하여 기본 구조를 생성할 수 있습니다.
-```swift
+```bash
 pod lib create { 라이브러리 이름 }
 ```
 

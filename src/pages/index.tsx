@@ -25,7 +25,7 @@ const Homepage = () => {
     },
     {
       title: 'Linkedin',
-      subtitle: '저랑 이웃하실래? 🥴',
+      subtitle: '저랑 이웃하실래요? 🥴',
       buttonText: 'Follow',
       isLongCard: false,
       url: 'https://www.linkedin.com/in/goodjunha/',

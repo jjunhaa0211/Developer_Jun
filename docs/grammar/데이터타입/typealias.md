@@ -13,11 +13,9 @@ Swift의 `typealias`는 기존의 타입에 보다 의미 있는 이름을 제�
 `typealias`는 새로운 타입을 생성하는 것이 아니라, 기존 타입에 새로운 이름을 부여합니다. 이는 특히 복잡한 타입 구조를 갖는 Swift의 제네릭 타입이나 클로저 같은 곳에서 유용하게 사용될 수 있습니다.
 
 ```swift
-swift코드 복사
 typealias StringList = [String]
 typealias DictionaryOfStrings = [String: String]
 typealias CompletionHandler = (Bool) -> Void
-
 ```
 
 위 예제에서 `StringList`는 문자열 배열, `DictionaryOfStrings`는 문자열 키와 값으로 구성된 딕셔너리, `CompletionHandler`는 Bool을 매개변수로 받고 반환 값이 없는 클로저 타입의 별칭입니다.
@@ -27,22 +25,18 @@ typealias CompletionHandler = (Bool) -> Void
 - **컬렉션과 클로저 간소화**: 복잡한 컬렉션 타입이나 클로저를 더 쉽게 참조하기 위해 타입 별칭을 사용할 수 있습니다. 이는 코드를 더 짧고 읽기 쉽게 만들어 줍니다.
 
 ```swift
-swift코드 복사
 func fetchResources(completion: CompletionHandler) {
     // 네트워크 호출 후 성공 여부에 따라 CompletionHandler 호출
     completion(true)
 }
-
 ```
 
 - **제네릭의 별칭 사용**: 제네릭 타입을 사용할 때 복잡성을 줄이기 위해 타입 별칭을 사용할 수 있습니다.
 
 ```swift
-swift코드 복사
 typealias IntDictionary<T> = Dictionary<Int, T>
 
 var accountDict: IntDictionary<String> = [1: "Alice", 2: "Bob"]
-
 ```
 
 - **API 디자인**: 라이브러리나 프레임워크를 설계할 때, `typealias`를 사용하여 공개 API의 일부분으로 타입 별칭을 제공하면 사용자에게 더 명확한 문맥을 제공할 수 있습니다.

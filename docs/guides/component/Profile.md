@@ -29,12 +29,10 @@ sidebar_position: 13
 `JProfileView`는 초기화 시 `JProfileImage`와 `JProfileType` 인스턴스를 필요로 합니다. 이 두 매개변수는 각각 프로필 이미지와 뷰의 크기 및 스타일을 설정합니다.
 
 ```swift
-swift코드 복사
 let profileView = JProfileView(
     profileImage: JProfileImage(type: .custom, customImage: UIImage(named: "userImage")),
     profileType: .bigProfile
 )
-
 ```
 
 ### 레이아웃 설정
@@ -42,12 +40,10 @@ let profileView = JProfileView(
 `SnapKit`을 사용하여 `JProfileView`의 크기와 위치를 정의할 수 있습니다. 아래 예제는 `JProfileView`를 부모 뷰의 중앙에 배치하고 안전 영역 상단과의 거리를 설정하는 방법을 보여줍니다.
 
 ```swift
-swift코드 복사
 profileView.snp.makeConstraints { make in
     make.centerX.equalToSuperview()
     make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
 }
-
 ```
 
 ### 이미지 구성
@@ -55,10 +51,8 @@ profileView.snp.makeConstraints { make in
 프로필 뷰에 새로운 이미지를 설정할 때는 `configureImage` 메소드를 사용합니다. 이 메소드는 `JProfileImage` 객체를 매개변수로 받아 현재 설정된 이미지 타입에 따라 이미지를 업데이트합니다.
 
 ```swift
-swift코드 복사
 let newImage = UIImage(named: "newUserImage")
 profileView.configureImage(with: JProfileImage(type: .custom, customImage: newImage))
-
 ```
 
 ### 사용 사례

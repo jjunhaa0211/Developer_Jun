@@ -10,10 +10,12 @@ sidebar_position: 4
 ## 개요
 
 `UserDefaults`는 Swift에서 제공하는 로컬 저장소로, iOS와 macOS 앱에서 간단한 데이터를 키-값 쌍으로 저장하고 조회할 수 있습니다. 이는 주로 사용자의 설정이나 선호도와 같은 소량의 데이터를 저장하는 데 사용됩니다.
+앱어디서나 데이터를 쉽게 읽고 저장할 수 있습니다. 그리고 싱클톤 패턴으로 설계되어 **앱 전체에서 단 하나의 인스턴스만 존재**하게 됩니다.
+UserDefault의 저장된 데이터는 **앱을 끄고 다시 실행 후에도 간단한 데이터가 남도록 도와줍니다**. 하지만 이 역시 사용자가 **앱을 삭제해버리면 통으로 데이터가 날라갑니다**.
 
 ## 사용 적합성
 
-- **적합한 사용**: 사용자의 기본 설정, 스위치 상태, 언어 설정 등 작은 데이터.
+- **적합한 사용**: 사용자의 기본 설정, 스위치 상태, 언어 설정 등
 - **부적합한 사용**: 대량의 데이터, 복잡한 데이터 구조(대신 `CoreData` 또는 `SQLite` 권장).
 
 ## UserDefault 뜯어보기
@@ -40,6 +42,16 @@ UserDefaults.standard.set("값", forKey: "키")
 let value = UserDefaults.standard.string(forKey: "키")
 UserDefaults.standard.removeObject(forKey: "키")
 ```
+
+## UserDefault는 어떻게 저장될까?
+UserDefaults.standard.set(데이터, “키”) 이런식으로 저장된 UserDefaults는 plist에 데이터를 저장하게 됩니다.
+이는 Data container 안에 Library > Preferences 내 plist 파일을 확인할 수 있습니다. 이뿐만 아니라 데이터가 어디에 저장되었는지도 알 수 있는데 아래는 그 예제입니다:
+```swift
+UserDefaults.standard.setValue(true, forKey: "test")
+// 저장 경로 출력
+print("App Directory path : \(NSHomeDirectory())")
+```
+위 코드로 출력된 경로를 찾아서 들어가면 앱 번들 ID.plist 파일을 확인할 수 있습니다.
 
 ## 사용자 꿀팁
 

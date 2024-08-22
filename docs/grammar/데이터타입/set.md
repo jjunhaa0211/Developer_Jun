@@ -13,9 +13,7 @@ Swift에서 `Set`은 유일한 값들을 저장하는 데 사용되는 컬렉�
 Swift의 `Set`은 기본 데이터 타입과 사용자 정의 데이터 타입을 포함하여, `Hashable` 프로토콜을 준수하는 모든 타입을 요소로 저장할 수 있습니다. 이는 `Set`이 각 요소의 해시 값을 사용하여 유일성을 보장하고, 빠르게 접근할 수 있도록 합니다.
 
 ```swift
-swift코드 복사
 var fruits = Set(["apple", "orange", "banana"])
-
 ```
 
 ### Set의 동적 조작
@@ -27,11 +25,9 @@ var fruits = Set(["apple", "orange", "banana"])
 - **멤버십 검사**: `contains(_:)` 메서드를 사용하여 특정 요소가 `Set`에 포함되어 있는지 검사할 수 있습니다.
 
 ```swift
-swift코드 복사
 fruits.insert("mango")
 fruits.remove("apple")
 print(fruits.contains("banana"))  // true
-
 ```
 
 ### Set의 집합 연산
@@ -39,12 +35,10 @@ print(fruits.contains("banana"))  // true
 `Set`은 수학적 집합 연산을 지원하여, 두 집합 간의 합집합, 교집합, 차집합 등을 쉽게 계산할 수 있습니다. 이는 데이터의 관계를 분석할 때 유용합니다.
 
 ```swift
-swift코드 복사
 let vegetables = Set(["carrot", "tomato", "pepper"])
 let allItems = fruits.union(vegetables)
 let commonItems = fruits.intersection(vegetables)
 let uniqueFruits = fruits.subtracting(vegetables)
-
 ```
 
 ### NSSet의 사용
@@ -52,13 +46,11 @@ let uniqueFruits = fruits.subtracting(vegetables)
 `NSSet`은 Objective-C의 집합 타입으로, Swift의 `Set`과 호환됩니다. `NSSet`은 불변성을 가지며, 요소를 추가하거나 제거할 수 없습니다. 변경 가능한 집합을 사용하려면 `NSMutableSet`을 사용해야 합니다. `NSSet`은 주로 Objective-C API와의 상호 작용에서 사용됩니다.
 
 ```swift
-swift코드 복사
 import Foundation
 
 let nsSet: NSSet = NSSet(array: ["apple", "orange", "banana"])
 let mutableSet = NSMutableSet(set: nsSet)
 mutableSet.add("grape")
-
 ```
 
 ### 결론

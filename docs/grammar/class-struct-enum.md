@@ -2,7 +2,7 @@
 title: 'class-struct-enum'
 slug: '/grammar/class-struct-enum'
 excerpt: 'class-struct-enum를 설명합니다.'
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Class Struct Enum

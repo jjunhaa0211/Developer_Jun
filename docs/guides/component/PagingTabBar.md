@@ -23,9 +23,7 @@ sidebar_position: 17
 카테고리 타이틀의 리스트로 `JPagingTabBar`를 초기화합니다:
 
 ```swift
-swift코드 복사
 let tabBar = JPagingTabBar(categoryTitleList: ["Home", "Profile", "Settings"])
-
 ```
 
 ### 선택 처리
@@ -33,11 +31,9 @@ let tabBar = JPagingTabBar(categoryTitleList: ["Home", "Profile", "Settings"])
 `selectedIndex`에 구독하여 탭 변경을 처리합니다:
 
 ```swift
-swift코드 복사
 tabBar.selectedIndex.subscribe(onNext: { index in
     print("Selected Index: \(index)")
 }).disposed(by: disposeBag)
-
 ```
 
 ### 뷰에 추가
@@ -45,14 +41,12 @@ tabBar.selectedIndex.subscribe(onNext: { index in
 `JPagingTabBar`를 부모 UIView에 추가하고 제약 조건을 설정합니다:
 
 ```swift
-swift코드 복사
 view.addSubview(tabBar)
 tabBar.snp.makeConstraints { make in
     make.top.equalToSuperview().offset(100)
     make.left.right.equalToSuperview()
     make.height.equalTo(80)
 }
-
 ```
 
 ### 컴포넌트 상세

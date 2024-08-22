@@ -6,7 +6,7 @@ sidebar_position: 4
 ---
 이제 드디어 라이브러리를 만들어볼 시간입니다. 어렵지는 않아요~
 데스크톱 터미널에서 아래와 같이 입력해주세요
-```swift
+```bash
 pod lib create { 라이브러리 이름 }
 ```
 
@@ -46,15 +46,15 @@ pod lib create { 라이브러리 이름 }
 
 그럼 이제 github로 가서 레포를 만들어주세요
 자신이 만든 파일에 가서 밑에 코드를 터미널에 넣어주세요
-```swift
+```bash
 git init
 ```
 입력이 완료되었다면 git 파일을 만들고 리모트 해주세요
-```swift
+```bash
 git remote add origin {git허브 주소.git}
 ```
 그리고 아래 터미널에 명령어를 사용해주세요
-```swift
+```bash
 git push -u origin master
 ```
 
@@ -65,7 +65,7 @@ git push -u origin master
 PContributionsView는 라이브러리명으로 제가 편집한 것이고 초기에는 PeplaceMe로 되어있을 것입니다.
 
 이제 라이브러리를 다 만들고 아래에 명령어를 쓰면 배포할 수 있습니다.
-```swift
+```bash
 pod spec lint
 ```
 
@@ -91,14 +91,14 @@ end
 배포가 성공했다면 초록색에 문구가 나올 것입니다. 이러면 배포준비가 끝났습니다.
 
 #### 본격~! 배포하기
-```swift
+```bash
 pod trunk register {이메일} {이름}
 // ex) pod trunk register goodjunha@gmail.com jjunhaa0211
 ```
 
 드디어 마지막 작업입니다. 
 아래 명령어를 라이브러리명만 바꾸어 적으시면 됩니다.
-```swift
+```bash
 pod trunk push {라이브러리명}.podspec
 ```
 <img src="https://i.imghippo.com/files/5ADx31722914222.png" alt="" border="0"/>

@@ -48,4 +48,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 ```
 
-수고 하셨습니다~
+이상 스토리보드를 제거하고 코드 기반으로 바꾸는 방법을 알려드렸습니다.

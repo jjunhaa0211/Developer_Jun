@@ -13,10 +13,8 @@ Swift에서 `Float`과 `Double`은 부동 소수점 수를 저장하고 처리
 `Float`은 32비트 부동 소수점을 제공하며, 일반적으로 6-7자리의 정밀도를 가집니다. 반면, `Double`은 64비트 부동 소수점을 제공하며, 약 15-16자리의 정밀도를 제공합니다. 이러한 차이는 정밀한 계산이 필요한 애플리케이션에서 중요한 역할을 합니다.
 
 ```swift
-swift코드 복사
 var simpleInterest: Float = 0.05
 var preciseInterest: Double = 0.05
-
 ```
 
 ### Float와 Double의 선택
@@ -26,13 +24,11 @@ var preciseInterest: Double = 0.05
 ### 예제: Float과 Double 활용
 
 ```swift
-swift코드 복사
 let piFloat: Float = 3.14159
 let piDouble: Double = 3.141592653589793
 
 print("Float로 표현된 파이: \(piFloat)")
 print("Double로 표현된 파이: \(piDouble)")
-
 ```
 
 이 예제에서는 `Float`과 `Double`을 사용하여 파이(π)를 다른 정밀도로 표현하는 방법을 보여줍니다.
@@ -42,11 +38,9 @@ print("Double로 표현된 파이: \(piDouble)")
 Swift의 `Float`과 `Double`은 수학적 연산을 위한 다양한 내장 메서드와 프로퍼티를 제공합니다. 예를 들어, `sqrt()`, `pow()`, `round()` 등의 함수를 사용하여 고급 수학 연산을 수행할 수 있습니다.
 
 ```swift
-swift코드 복사
 let radius: Double = 10.0
 let area = Double.pi * pow(radius, 2)
 print("원의 면적: \(area)")
-
 ```
 
 ### Float와 Double의 활용 팁

@@ -2,7 +2,7 @@
 title: 'function'
 slug: '/grammar/function'
 excerpt: 'function를 설명합니다.'
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # 함수

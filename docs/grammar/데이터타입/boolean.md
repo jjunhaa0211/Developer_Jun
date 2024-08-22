@@ -14,14 +14,12 @@ Swift에서 `Boolean` 혹은 `Bool`은 가장 기본적이면서 중요한 �
 Boolean 값은 조건문과 함께 사용되어 프로그램의 결정 구조를 형성합니다. 간단한 예로, 사용자의 로그인 성공 여부에 따라 다른 화면을 보여주는 경우, `isLoggedIn` 변수의 `Bool` 값을 사용하여 처리할 수 있습니다:
 
 ```swift
-swift코드 복사
 let isLoggedIn: Bool = true
 if isLoggedIn {
     print("사용자가 로그인했습니다.")
 } else {
     print("로그인이 필요합니다.")
 }
-
 ```
 
 ### Boolean과 조건문

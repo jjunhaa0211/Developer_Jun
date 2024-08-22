@@ -2,7 +2,7 @@
 title: 'if-switch'
 slug: '/grammar/if-switch'
 excerpt: 'if-switch를 설명합니다.'
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Swift의 조건문: if문과 switch문 이해하기
@@ -16,7 +16,6 @@ Swift의 `if`문은 하나 이상의 조건을 평가하고, 그 결과에 따�
 ### 기본 구조
 
 ```swift
-swift코드 복사
 if 조건 {
     // 조건이 참일 때 실행될 코드
 } else if 다른 조건 {
@@ -24,13 +23,11 @@ if 조건 {
 } else {
     // 위의 어떤 조건도 참이 아닐 때 실행될 코드
 }
-
 ```
 
 ### 예제
 
 ```swift
-swift코드 복사
 let score = 85
 
 if score >= 90 {
@@ -40,7 +37,6 @@ if score >= 90 {
 } else {
     print("C grade or below")
 }
-
 ```
 
 ## switch문
@@ -50,7 +46,6 @@ Swift의 `switch`문은 다양한 가능한 경우 중 하나를 선택하여 �
 ### 기본 구조
 
 ```swift
-swift코드 복사
 switch 변수 {
 case 값1:
     // 변수가 값1과 일치할 때 실행될 코드
@@ -59,13 +54,11 @@ case 값2, 값3:
 default:
     // 어떤 case도 일치하지 않을 때 실행될 코드
 }
-
 ```
 
 ### 예제
 
 ```swift
-swift코드 복사
 let someCharacter = "z"
 
 switch someCharacter {
@@ -76,7 +69,6 @@ case "b", "c", "d", "f", "g":
 default:
     print("\(someCharacter) is not a vowel or a consonant.")
 }
-
 ```
 
 ## C언어와의 비교
@@ -96,12 +88,10 @@ C언어에서 `switch` 문은 `break`를 사용하지 않으면, 선택된 �
 Swift에서 `for-in` 문은 컬렉션의 각 항목에 대해 반복을 수행합니다. 이 구조는 C언어의 전통적인 `for` 문보다 간결하며, `where` 절을 추가하여 특정 조건을 만족하는 항목에 대해서만 반복을 수행할 수 있습니다.
 
 ```swift
-swift코드 복사
 let numbers = [1, 2, 3, 4, 5]
 for number in numbers where number > 3 {
     print(number)
 }
-
 ```
 
 ### C언어
@@ -109,14 +99,12 @@ for number in numbers where number > 3 {
 C언어의 `for` 문은 초기화, 조건, 반복 실행(증감) 세 부분으로 구성됩니다. 이는 복잡한 반복 조건을 다룰 수 있지만, Swift의 `for-in` 문처럼 직관적이지는 않습니다.
 
 ```c
-c코드 복사
 int numbers[] = {1, 2, 3, 4, 5};
 for(int i = 0; i < 5; i++) {
     if(numbers[i] > 3) {
         printf("%d\n", numbers[i]);
     }
 }
-
 ```
 
 ## 결론
