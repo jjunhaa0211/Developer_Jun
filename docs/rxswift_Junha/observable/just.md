@@ -1,5 +1,5 @@
 ---
-title: 'Just?'
+title: 'just?'
 slug: '/rxswift/observable/just'
 excerpt: 'Just?'
 sidebar_position: 2
