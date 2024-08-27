@@ -2,7 +2,7 @@
 title: 'create?'
 slug: '/rxswift/observable/create'
 excerpt: 'create?'
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 > **Create**는 직접적인 코드 구현을 통해 옵저버 메서드를 호출하여 옵저버블을 생성합니다.
