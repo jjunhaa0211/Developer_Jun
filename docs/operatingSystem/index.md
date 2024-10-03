@@ -2,7 +2,7 @@
 title: 'Operating System'
 slug: '/OS'
 excerpt: '운영체제를 정리합니다.'
-sidebar_position: 8
+sidebar_position: 7
 ---
 
 # 운영체제란
