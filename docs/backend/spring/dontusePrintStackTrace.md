@@ -1,6 +1,6 @@
 ---
 title: 'PrintStackTrace를 사용하면 안되는 이유'
-slug: '/backend/dontusePrintStackTrace'
+slug: '/backend/spring/dontusePrintStackTrace'
 excerpt: 'PrintStackTrace를 사용하면 안되는 이유를 설명합니다.'
 sidebar_position: 2
 ---
